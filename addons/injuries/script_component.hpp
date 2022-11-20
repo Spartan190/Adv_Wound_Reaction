@@ -1,4 +1,4 @@
-#include "\x\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #define COMPONENT injuries
 #define COMPONENT_BEAUTIFIED Injuries
 #include "\z\snad\addons\main\script_mod.hpp"

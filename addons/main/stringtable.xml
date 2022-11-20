@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="SNAD">
+    <Package name="Main">
+        <Key ID="STR_SNAD_Main_Category">
+            <English>79AD Settings</English>
+            <German>79AD Einstellungen</German>
+        </Key>
+        <Key ID="STR_SNAD_Main_79AD">
+            <English>79AD</English>
+            <German>79AD</German>
+        </Key>
+    </Package>
+</Project>

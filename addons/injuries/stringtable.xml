@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="SNAD">
+    <Package name="Injuries">
+        <Key ID="STR_SNAD_Injuries_Injuries_DisplayName">
+            <English>Enabled?</English>
+            <German>Aktiviert?</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_SubCategory">
+            <English>Injuries</English>
+            <German>Verletzungen</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_Injuries_Description">
+            <English>Determines if this module is enabled.</English>
+            <German>Bestimmt, ob dieses Modul aktiv ist.</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_WeaponHandleMode_DisplayName">
+            <English>Weapon drop type</English>
+            <German>Waffen fallenlassen Art</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_WeaponHandleMode_Description">
+            <English>The way the weapon is dropped.\nNone: don't drop the weapon.\nDrop: Drop the weapon on the ground.\nPut on back\nPut the weapon the on the back.</English>
+            <German>Die Weise wie die Waffen fallen gelassen wird.\nKeine: Waffe nicht fallen lassen.\nFallen lassen: Waffe wird auf den Boden fallen gelassen.\nAuf den Rücken: Waffe wird auf den Rücken gepackt.</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_ModeNone">
+            <English>None</English>
+            <German>Keine</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_ModeDrop">
+            <English>Drop</English>
+            <German>Fallen lassen</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_ModeBack">
+            <English>Put on back</English>
+            <German>Auf den Rücken</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_GoProne_DisplayName">
+            <English>Go Prone?</English>
+            <German>Hinlegen?</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_GoProne_Description">
+            <English>Enable this if you want the player to lay down when too injuried.</English>
+            <German>Aktivieren um den Spieler hinlegen zu lassen, wenn die Verletzungen zu stark sind.</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_PainThreshold_DisplayName">
+            <English>Pain treshold</English>
+            <German>Schmerzgrenze</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_PainThresold_Description">
+            <English>The threshold for the pain level.</English>
+            <German>Die Grenze für den Schmerzlevel.</German>
+        </Key>
+    </Package>
+</Project>

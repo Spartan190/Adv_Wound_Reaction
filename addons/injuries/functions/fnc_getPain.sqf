@@ -1,4 +1,4 @@
-#include "script_component.sqf"
+#include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
 * Gets the pain level from ACE_medical
