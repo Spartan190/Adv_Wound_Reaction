@@ -1,0 +1,1 @@
+#include "\z\snad\addons\main\script_component.hpp"
