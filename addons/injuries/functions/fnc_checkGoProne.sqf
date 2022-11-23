@@ -16,7 +16,6 @@
 * Public: No
 */
 params ["_unit", "_painLevel"];
-//_playerPain = [_unit] call FUNC(getPain);
 _isProne = false;
 if (GVAR(isEnabled) && _painLevel >= GVAR(painThreshold)) then {
 	if(GVAR(goProne)) then {
