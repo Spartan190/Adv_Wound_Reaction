@@ -15,5 +15,5 @@
 * Public: No
 */
 params ["_unit"];
-_value = GET_PAIN_PERCEIVED(_unit);
+_value = ACE_GET_PAIN_PERCEIVED(_unit);
 _value;

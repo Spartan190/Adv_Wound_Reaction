@@ -49,5 +49,13 @@
             <English>The threshold for the pain level.</English>
             <German>Die Grenze für den Schmerzlevel.</German>
         </Key>
+        <Key ID="STR_SNAD_Injuries_Drag">
+            <English>Drag</English>
+            <German>Drag</German>
+        </Key>
+        <Key ID="STR_SNAD_Injuries_Carry">
+            <English>Carry</English>
+            <German>Carry</German>
+        </Key>
     </Package>
 </Project>

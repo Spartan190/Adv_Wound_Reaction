@@ -1,4 +1,5 @@
 PREP(canDrag);
-PREP(checkGoProneEH);
-PREP(checkHandleWeaponEH);
+PREP(checkGoProne);
+PREP(checkHandleWeapon);
+PREP(checkPainEH);
 PREP(getPain);

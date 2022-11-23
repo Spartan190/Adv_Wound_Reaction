@@ -1,0 +1,9 @@
+name = "79AD"
+prefix = "snad"
+author = "79AD"
+template = "cba"
+mainprefix = "z"
+include = ["./include"]
+files = ["mod.cpp"]
+folder_optionals = true
+sig_version = 3

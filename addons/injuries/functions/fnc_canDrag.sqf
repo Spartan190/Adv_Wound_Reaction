@@ -19,5 +19,5 @@
 
 params ["_unit", "_target"];
 
-if !([_unit, _target, ["isNotSwimming"]] call ACE_common_fnc_canInteractWith) exitWith {false};
-alive _target && {vehicle _target isEqualto _target} && {_target getVariable ["SNAD_draggableCarryable", false]}
+if !([_unit, _target, ["isNotSwimming"]] call ACEFUNC(common,canInteractWith)) exitWith {false};
+alive _target && {vehicle _target isEqualto _target} && {_target getVariable [QGVAR(draggableCarryable), false]}
