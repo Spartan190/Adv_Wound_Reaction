@@ -1,2 +1,2 @@
 protocol = 1;
-name = "79AD Mods";
+name = "AWR - Advanced Wound Reaction";

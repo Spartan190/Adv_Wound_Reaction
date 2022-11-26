@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="SNAD">
+<Project name="AWR">
     <Package name="Main">
-        <Key ID="STR_SNAD_Main_Category">
-            <English>79AD Settings</English>
-            <German>79AD Einstellungen</German>
+        <Key ID="STR_AWR_Main_Category">
+            <English>AWR Settings</English>
+            <German>AWR Einstellungen</German>
         </Key>
-        <Key ID="STR_SNAD_Main_79AD">
-            <English>79AD</English>
-            <German>79AD</German>
+        <Key ID="STR_AWR_Main_79AD">
+            <English>AWR</English>
+            <German>AWR</German>
+        </Key>
+        <Key ID="STR_AWR_Main_Drag">
+            <English>Drag</English>
+            <German>Drag</German>
+        </Key>
+        <Key ID="STR_AWR_Player_Carry">
+            <English>Carry</English>
+            <German>Carry</German>
         </Key>
     </Package>
 </Project>

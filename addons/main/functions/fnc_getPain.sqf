@@ -10,10 +10,11 @@
 * The pain level from ACE_medical
 *
 * Example:
-* [ACE_player] call snad_injuries_fnc_getPain
+* [ACE_player] call awr_main_fnc_getPain
 *
 * Public: No
 */
 params ["_unit"];
 _value = ACE_GET_PAIN_PERCEIVED(_unit);
+INFO_2("Checking pain for %1: %2",_unit,_value);
 _value;

@@ -1,0 +1,1 @@
+#include "\z\awr\addons\ai\script_component.hpp"

@@ -1,5 +1,5 @@
-#define COMPONENT main
-#define COMPONENT_BEAUTIFIED Main
+#define COMPONENT ai
+#define COMPONENT_BEAUTIFIED AI
 #include "\z\awr\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

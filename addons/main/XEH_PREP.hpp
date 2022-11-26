@@ -1,0 +1,2 @@
+PREP(canDrag);
+PREP(getPain);

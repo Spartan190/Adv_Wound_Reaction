@@ -2,7 +2,7 @@
 // COMPONENT should be defined in the script_component.hpp and included BEFORE this hpp
 
 #define MAINPREFIX z
-#define PREFIX snad
+#define PREFIX awr
 
 #include "script_version.hpp"
 
@@ -16,7 +16,7 @@
 #define REQUIRED_CBA_VERSION {3,15,7}
 
 #ifdef COMPONENT_BEAUTIFIED
-    #define COMPONENT_NAME QUOTE(79AD - COMPONENT_BEAUTIFIED)
+    #define COMPONENT_NAME QUOTE(AWR - COMPONENT_BEAUTIFIED)
 #else
-    #define COMPONENT_NAME QUOTE(79AD - COMPONENT)
+    #define COMPONENT_NAME QUOTE(AWR - COMPONENT)
 #endif

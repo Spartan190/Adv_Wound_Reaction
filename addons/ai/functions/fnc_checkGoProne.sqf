@@ -11,16 +11,19 @@
 * If the unit is prone or not
 *
 * Example:
-* [ACE_player] spawn snad_injuries_fnc_checkGoProneEH
+* [ACE_player] spawn awr_ai_fnc_checkGoProneEH
 *
 * Public: No
 */
 params ["_unit", "_painLevel"];
 _isProne = false;
-if (GVAR(isEnabled) && _painLevel >= GVAR(painThreshold)) then {
+if (EGVAR(main,isIncapacitated)) then {
 	if(GVAR(goProne)) then {
 		if(stance _unit != "PRONE") then {
-			_unit switchMove "AmovPpneMstpSrasWrflDnon"; // player goes prone
+			// Adjust animation based on the current weapon 
+			private _wpn = ["non", "rfl", "lnr", "pst"] param [["", primaryWeapon _medic, secondaryWeapon _medic, handgunWeapon _medic] find currentWeapon _medic, "non"];
+			_animation = ["AmovPpneMstpSrasW[wpn]Dnon", "[wpn]", _wpn] call CBA_fnc_replace;
+			_unit playActionNow _animation; // player goes prone
 		} else {
 			_isProne = true;
 		};

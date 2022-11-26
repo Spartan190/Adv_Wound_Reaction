@@ -12,7 +12,7 @@
 * If the target can be dragged or carried. <BOOL>
 *
 * Example:
-* [ACE_player, _target] call snad_injuries_fnc_canDrag
+* [ACE_player, _target] call awr_main_fnc_canDrag
 *
 * Public: No
 */
@@ -20,4 +20,4 @@
 params ["_unit", "_target"];
 
 if !([_unit, _target, ["isNotSwimming"]] call ACEFUNC(common,canInteractWith)) exitWith {false};
-alive _target && {vehicle _target isEqualto _target} && {_target getVariable [QGVAR(draggableCarryable), false]}
+alive _target && {vehicle _target isEqualto _target} && {_target getVariable [QGVAR(isIncapacitated), false]}

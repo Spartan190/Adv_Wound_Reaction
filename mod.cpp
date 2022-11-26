@@ -1,5 +1,5 @@
-name = "79AD Mods";
-description = "79AD Mods";
-tooltip = "79AD Mods";
-overview = "Custom made mods by 79AD for internal use.";
-author = "79AD";
+name = "AWR - Advanced Wound Reaction";
+description = "Advanced Wound Reaction";
+tooltip = "Advanced Wound Reaction";
+overview = "Extension for ACE3's medical system. Adds more reactions when dealing with injuries.";
+author = "[79AD] S. Spartan";

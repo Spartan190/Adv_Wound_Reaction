@@ -11,7 +11,7 @@
 * nothing
 *
 * Example:
-* [ACE_player] spawn snad_injuries_fnc_checkPainEH;
+* [ACE_player] spawn awr_ai_fnc_checkIncapacitaedEH;
 *
 * Public: No
 */
@@ -20,7 +20,9 @@ if (!alive _unit) exitWith {};
 if (GVAR(isEnabled) && _painLevel >= GVAR(painThreshold)) then {
 	_isCarryable = [_unit, _painLevel] call FUNC(checkGoProne);
 	[_unit, _painLevel] call FUNC(checkHandleWeapon);
-	_unit setVariable [QGVAR(draggableCarryable), _isCarryable, true];
+	_unit setVariable [QEGVAR(main,isIncapacitated), true, true];
 } else {
-	_unit setVariable [QGVAR(draggableCarryable), false, true];
+	_unit setVariable [QEGVAR(main,isIncapacitated), false, true];
 };
+
+_unit setVariable [QGVAR(wasIncapacitated), GVAR(isIncapacitated), true];

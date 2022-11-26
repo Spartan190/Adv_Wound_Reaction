@@ -1,1 +1,1 @@
-#include "\z\snad\addons\main\script_component.hpp"
+#include "\z\awr\addons\main\script_component.hpp"

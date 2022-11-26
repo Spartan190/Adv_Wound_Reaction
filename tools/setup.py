@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #######################
-#  SNAD Setup Script  #
+#  AWR Setup Script  #
 #######################
 
 import os
@@ -13,8 +13,8 @@ import winreg
 
 ######## GLOBALS #########
 MAINDIR = "z"
-PROJECTDIR = "snad"
-SNAD = "P:\\z\\snad"
+PROJECTDIR = "awr"
+AWR = "P:\\z\\awr"
 CBA = "P:\\x\\cba"
 ACE = "P:\\z\\ace"
 ##########################
@@ -34,11 +34,11 @@ def main():
 
   If you have not done those things yet, please abort this script in the next step and do so first.
 
-  This script will create two hard links on your system, both pointing to your SNAD project folder:
-    [Arma 3 installation directory]\\{} => SNAD project folder
-    P:\\{}                              => SNAD project folder
+  This script will create two hard links on your system, both pointing to your AWR project folder:
+    [Arma 3 installation directory]\\{} => AWR project folder
+    P:\\{}                              => AWR project folder
 
-  It will also copy the required SNAD includes to {}, if you do not have the SNAD source code already.""".format(FULLDIR,FULLDIR,SNAD))
+  It will also copy the required AWR includes to {}, if you do not have the AWR source code already.""".format(FULLDIR,FULLDIR,AWR))
     print("\n")
 
     try:
@@ -91,7 +91,7 @@ def main():
     print("# Links created successfully.")
 
 
-    print("\n# Copying required SNAD includes ...")
+    print("\n# Copying required AWR includes ...")
 
     if os.path.exists(CBA):
         print("{} already exists, skipping.".format(CBA))
@@ -105,11 +105,11 @@ def main():
         shutil.copytree(os.path.join(projectpath, "include", "z", "ace"), ACE)
     except:
         raise
-        print("Something went wrong while copying SNAD includes. Please copy include\\x\\CBA to {} manually.".format(SNAD))
-        print("Something went wrong while copying SNAD includes. Please copy include\\z\\ace to {} manually.".format(SNAD))
+        print("Something went wrong while copying AWR includes. Please copy include\\x\\CBA to {} manually.".format(AWR))
+        print("Something went wrong while copying AWR includes. Please copy include\\z\\ace to {} manually.".format(AWR))
         return 7
 
-    print("# SNAD includes copied successfully to {}.".format(SNAD))
+    print("# AWR includes copied successfully to {}.".format(AWR))
 
     return 0
 
