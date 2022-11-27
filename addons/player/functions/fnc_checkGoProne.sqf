@@ -16,7 +16,6 @@
 * Public: No
 */
 params ["_unit", "_painLevel"];
-if (!hasInterface) exitWith {};
 if (!(_unit getVariable [QEGVAR(main,isIncapacitated), false])) exitWith {false};
 
 _isProne = false;

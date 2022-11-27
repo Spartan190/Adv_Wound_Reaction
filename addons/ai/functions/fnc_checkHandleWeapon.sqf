@@ -15,33 +15,41 @@
 * Public: No
 */
 params ["_unit","_painLevel"];
-if (GVAR(weaponHandleMode) != 0 && EGVAR(main,isIncapacitated)) then {
-	_pWeapon = primaryWeapon _unit;
-	_handgun = handgunWeapon _unit;
-	_cWeapon = currentWeapon _unit;
+_isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
+if (GVAR(weaponHandleMode) == 0)  exitWith {};
 
-	if(!GVAR(wasIncapacitated)) then {
-		[_unit] setVariable [QGVAR(canUseHandgun), GVAR(handgunChance) > random 100 ,true];
+
+
+_wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
+
+_pWeapon = primaryWeapon _unit;
+_handgun = handgunWeapon _unit;
+_cWeapon = currentWeapon _unit;
+
+if(!_wasIncapacitated) then {
+	_unit setVariable [QGVAR(canUseHandgun), GVAR(handgunChance) > random 100 ,true];
+};
+
+if(_cWeapon != "" && _cWeapon == _pWeapon) then {
+	switch (GVAR(weaponHandleMode)) do {
+		case 1: {
+			_pHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);
+			_unit setVariable [QGVAR(primaryWeaponHolder), [_pHolder,_pWeapon], true];
+		};
+		case 2: {
+			_unit action ["SwitchWeapon", _unit, _unit, 299];
+		};			
 	};
-
-	if(_cWeapon == _pWeapon) then {
+} else {
+	if(_cWeapon != "" && _cWeapon == _handgun && !(_unit getVariable QGVAR(canUseHandgun))) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
-				[_unit] call ACEFUNC(hitreactions,throwWeapon);
+				_hHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);
+				_unit setVariable [QGVAR(handgunWeaponHolder), [_hHolder,_handgun], true];
 			};
 			case 2: {
-				_unit action ["SwitchWeapon", _unit, _unit, -1];
-			};			
-		};
-	} else if(_cWeapon == _handgun && !GVAR(canUseHandgun)) then {
-		switch (GVAR(weaponHandleMode)) do {
-			case 1: {
-				[_unit] call ACEFUNC(hitreactions,throwWeapon);
-			};
-			case 2: {
-				// TODO: make a way to make the AI holster the weapon or not attack
-				_unit action ["SwitchWeapon", _unit, _unit, -1];
+				_unit action ["SwitchWeapon", _unit, _unit, 299];
 			};
 		};
 	};
-}
+};

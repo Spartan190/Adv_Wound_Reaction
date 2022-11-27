@@ -57,5 +57,13 @@
             <English>Carry</English>
             <German>Carry</German>
         </Key>
+        <Key ID="STR_AWR_AI_HandgunChance_DisplayName">
+            <English>Handgun chance</English>
+            <German>Handwaffe Chance</German>
+        </Key>
+        <Key ID="STR_AWR_AI_HandgunChance_Description">
+            <English>The chance the player may use the handgun if incapacitated.</English>
+            <German> zu welcher der Spieler die Handwaffe benutzen darf, wenn dieser handlungsunfähig ist.</German>
+        </Key>
     </Package>
 </Project>

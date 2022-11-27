@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
 
 ["CBA_settingsInitialized", {
+	if (!hasInterface) exitWith {};
 	["ace_medical_handleUnitVitals", {
 		params ["_unit"];
+		if(!GVAR(isEnabled) || !isPlayer _unit) exitWith {};
 		_painLevel = _unit call EFUNC(main,getPain);
-		INFO_2("Vitals for unit %1 are %2",_unit, _painLevel);
 		[_unit, _painLevel] spawn FUNC(checkIncapacitatedEH);
 	}] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;

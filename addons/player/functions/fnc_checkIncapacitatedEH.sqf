@@ -25,5 +25,4 @@ if (GVAR(isEnabled) && _painLevel >= GVAR(painThreshold)) then {
 	_unit setVariable [QEGVAR(main,isIncapacitated), false, true];
 };
 
-INFO_2("%1 isIncapacitated? %2",_unit,_unit getVariable QEGVAR(main,isIncapacitated));
 _unit setVariable [QGVAR(wasIncapacitated), _unit getVariable QEGVAR(main,isIncapacitated), true];

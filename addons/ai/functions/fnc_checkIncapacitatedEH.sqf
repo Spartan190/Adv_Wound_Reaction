@@ -11,18 +11,19 @@
 * nothing
 *
 * Example:
-* [ACE_player] spawn awr_ai_fnc_checkIncapacitaedEH;
+* [ACE_player] spawn awr_player_fnc_checkIncapacitaedEH;
 *
 * Public: No
 */
 params ["_unit", "_painLevel"];
 if (!alive _unit) exitWith {};
 if (GVAR(isEnabled) && _painLevel >= GVAR(painThreshold)) then {
+	_unit setVariable [QEGVAR(main,isIncapacitated), true, true];
 	_isCarryable = [_unit, _painLevel] call FUNC(checkGoProne);
 	[_unit, _painLevel] call FUNC(checkHandleWeapon);
-	_unit setVariable [QEGVAR(main,isIncapacitated), true, true];
 } else {
 	_unit setVariable [QEGVAR(main,isIncapacitated), false, true];
+	[_unit] call FUNC(pickupWeapons);
 };
 
-_unit setVariable [QGVAR(wasIncapacitated), GVAR(isIncapacitated), true];
+_unit setVariable [QGVAR(wasIncapacitated), _unit getVariable QEGVAR(main,isIncapacitated), true];

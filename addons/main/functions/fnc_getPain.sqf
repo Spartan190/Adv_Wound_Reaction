@@ -16,5 +16,4 @@
 */
 params ["_unit"];
 _value = ACE_GET_PAIN_PERCEIVED(_unit);
-INFO_2("Checking pain for %1: %2",_unit,_value);
 _value;

@@ -15,12 +15,11 @@
 * Public: No
 */
 params ["_unit","_painLevel"];
-if (!hasInterface) exitWith {};
 _isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
 if (GVAR(weaponHandleMode) == 0 || !_isIncapacitated)  exitWith {};
 
 
-_wasIncapacitated = _unit getVariable [QEGVAR(main,wasIncapacitated), false];
+_wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
 _pWeapon = primaryWeapon _unit;
 _handgun = handgunWeapon _unit;
 _cWeapon = currentWeapon _unit;
