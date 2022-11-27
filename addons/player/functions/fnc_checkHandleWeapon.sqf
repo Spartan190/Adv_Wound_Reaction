@@ -21,6 +21,7 @@ if (GVAR(weaponHandleMode) == 0 || !_isIncapacitated)  exitWith {};
 
 _wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
 _pWeapon = primaryWeapon _unit;
+_launcher = secondaryWeapon _unit;
 _handgun = handgunWeapon _unit;
 _cWeapon = currentWeapon _unit;
 
@@ -28,23 +29,27 @@ if(!_wasIncapacitated) then {
 	_unit setVariable [QGVAR(canUseHandgun), GVAR(handgunChance) > random 100 ,true];
 };
 
-if(_cWeapon == _pWeapon) then {
-	switch (GVAR(weaponHandleMode)) do {
-		case 1: {
-			[_unit] call ACEFUNC(hitreactions,throwWeapon);
-		};
-		case 2: {
-			_unit action ["SwitchWeapon", _unit, _unit, -1];
-		};			
-	};
+if(_cWeapon == _launcher) then {
+	_unit action ["SwitchWeapon", _unit, _unit, -1];
 } else {
-	if(_cWeapon == _handgun && !(_unit getVariable QGVAR(canUseHandgun))) then {
+	if(_cWeapon == _pWeapon) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
 				[_unit] call ACEFUNC(hitreactions,throwWeapon);
 			};
 			case 2: {
 				_unit action ["SwitchWeapon", _unit, _unit, -1];
+			};			
+		};
+	} else {
+		if(_cWeapon == _handgun && !(_unit getVariable QGVAR(canUseHandgun))) then {
+			switch (GVAR(weaponHandleMode)) do {
+				case 1: {
+					[_unit] call ACEFUNC(hitreactions,throwWeapon);
+				};
+				case 2: {
+					_unit action ["SwitchWeapon", _unit, _unit, -1];
+				};
 			};
 		};
 	};

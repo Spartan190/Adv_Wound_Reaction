@@ -16,12 +16,19 @@
 * Public: No
 */
 params ["_unit", "_painLevel"];
-if (!(_unit getVariable [QEGVAR(main,isIncapacitated), false])) exitWith {false};
+_wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
+_isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
+if (!_isIncapacitated && _wasIncapacitated) then {	
+	_unit setUnitPos "AUTO";
+};
+
+if(!_isIncapacitated) exitWith {false};
 
 _isProne = false;
 if(GVAR(goProne)) then {
 	if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
 		[_unit] call ACEFUNC(common,setProne);
+		_unit setUnitPos "DOWN";
 	} else {
 		_isProne = true;
 	};

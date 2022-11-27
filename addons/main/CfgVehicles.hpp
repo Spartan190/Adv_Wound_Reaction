@@ -11,7 +11,7 @@ class CfgVehicles {
 					icon = QUOTE(ACEPATHOF(dragging, UI\icons\person_drag.paa));
 				};
 				class GVAR(carry) {
-					displayName = CSTRING(Drag);
+					displayName = CSTRING(Carry);
 					condition = QUOTE([ARR_2(_player, _target)] call FUNC(canDrag));
 					statement = QUOTE([ARR_2(_player, _target)] call ACEFUNC(dragging, startCarry));
 					showDisabled = 0;
