@@ -31,6 +31,9 @@
 *.out
 *.app
 
+# Compiled PBOs
+*.pbo
+
 ## Added by HEMTT
 releases/*
 *.biprivatekey
