@@ -1,4 +1,4 @@
-ace_blank
+compat_ims
 ===================
 
-Adds blank feature.
+Compatibility addon for the Improved Melee System by Webknight

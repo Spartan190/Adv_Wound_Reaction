@@ -1,4 +1,4 @@
-ace_blank
+AWR_Main
 ===================
 
-Adds blank feature.
+Contains all the main/core features of AWR.

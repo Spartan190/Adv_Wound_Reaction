@@ -42,7 +42,8 @@ if(_cWeapon == _launcher) then {
 			};			
 		};
 	} else {
-		if(_cWeapon == _handgun && !(_unit getVariable QGVAR(canUseHandgun))) then {
+		_ignoreIndex = EGVAR(main,ignoreChanceClasses) findIf {_handgun == _x || _handgun isKindOf _x};
+		if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable QGVAR(canUseHandgun)))) then {
 			switch (GVAR(weaponHandleMode)) do {
 				case 1: {
 					[_unit] call ACEFUNC(hitreactions,throwWeapon);

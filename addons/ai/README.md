@@ -1,4 +1,4 @@
-ace_blank
+AWR_AI
 ===================
 
-Adds blank feature.
+Contains all the AI features of AWR.

@@ -6,8 +6,8 @@
             <German>AWR Einstellungen</German>
         </Key>
         <Key ID="STR_AWR_Main_79AD">
-            <English>AWR</English>
-            <German>AWR</German>
+            <English>79AD</English>
+            <German>79AD</German>
         </Key>
         <Key ID="STR_AWR_Main_Drag">
             <English>Drag</English>
@@ -16,6 +16,22 @@
         <Key ID="STR_AWR_Main_Carry">
             <English>Carry</English>
             <German>Carry</German>
+        </Key>
+        <Key ID="STR_AWR_Main_SubCategory">
+            <English>General</English>
+            <German>Allgemein</German>
+        </Key>
+        <Key ID="STR_AWR_Main_IgnoreChanceClasses_DisplayName">
+            <English>Chance ignore classes</English>
+            <German>ignorierte Chance Klassen</German>
+        </Key>
+        <Key ID="STR_AWR_Main_IgnoreChanceClasses_Description">
+            <English>List of class names to ignore for the handgun chances. Weapons of this classes will also be dropped.\nIn array format e.g.: ["class1", "class2"]</English>
+            <German>Liste von Klassennamen, welche für die Handwaffen Chance ignoriert werden. Diese Waffen werden immer fallengelassen.\nSchreibweise in Array Format z.B.: ["Klasse1", "Klasse2"]</German>
+        </Key>
+        <Key ID="STR_AWR_Main_URL">
+            <English>https://github.com/Spartan190/Adv_Wound_Reaction</English>
+            <German>https://github.com/Spartan190/Adv_Wound_Reaction</German>
         </Key>
     </Package>
 </Project>

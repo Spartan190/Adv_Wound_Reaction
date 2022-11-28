@@ -1,4 +1,4 @@
-ace_blank
+AWR_Player
 ===================
 
-Adds blank feature.
+Contains all players logic for AWR.
