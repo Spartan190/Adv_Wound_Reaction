@@ -12,7 +12,7 @@
     "LIST", // setting type
     [LSTRING(WeaponHandleMode_DisplayName), LSTRING(WeaponHandleMode_Description)],//"Weapon Handling", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     [ELSTRING(main,Category), LSTRING(SubCategory)],//["79AD Settings", "Pain Handling"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [[0, 1, 2], [LSTRING(ModeNone), LSTRING(ModeDrop), LSTRING(ModeBack)], 1], // defaultvalue
+    [[0, 1], [LSTRING(ModeNone), LSTRING(ModeDrop)], 1], // defaultvalue
     true // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 ] call CBA_fnc_addSetting;
 

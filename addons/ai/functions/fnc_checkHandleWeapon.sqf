@@ -35,9 +35,6 @@ if(_cWeapon != "" && _cWeapon == _pWeapon) then {
 		case 1: {
 			_pHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);
 			_unit setVariable [QGVAR(primaryWeaponHolder), [_pHolder,_pWeapon], true];
-		};
-		case 2: {
-			_unit action ["SwitchWeapon", _unit, _unit, 299];
 		};			
 	};
 } else {
@@ -47,9 +44,6 @@ if(_cWeapon != "" && _cWeapon == _pWeapon) then {
 			case 1: {
 				_hHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);
 				_unit setVariable [QGVAR(handgunWeaponHolder), [_hHolder,_handgun], true];
-			};
-			case 2: {
-				_unit action ["SwitchWeapon", _unit, _unit, 299];
 			};
 		};
 	};
