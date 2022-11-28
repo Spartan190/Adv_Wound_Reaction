@@ -20,7 +20,7 @@ if (!alive _unit) exitWith {};
 if (GVAR(isEnabled) && _painLevel >= GVAR(painThreshold)) then {
 	_unit setVariable [QEGVAR(main,isIncapacitated), true, true];
 	_isCarryable = [_unit, _painLevel] call FUNC(checkGoProne);
-	[_unit, _painLevel] call FUNC(checkHandleWeapon);
+	[_unit, _painLevel] call FUNC(checkHandleWeapon);	
 } else {
 	_unit setVariable [QEGVAR(main,isIncapacitated), false, true];
 	[_unit] call FUNC(pickupWeapons);

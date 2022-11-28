@@ -26,15 +26,12 @@ LOG_2("%1 _wasIncapacitated %2 ",_unit,_wasIncapacitated);
 if(!_isIncapacitated && _wasIncapacitated) then {
 	[_unit] spawn {
 		params["_unit"];
-		LOG("Picking up Weapons...");
 		_pickUpPrim = _unit getVariable QGVAR(primaryWeaponHolder);
-		LOG_2("Picking up primary weapon: %1 , %2", _pickUpPrim select 0, _pickUpPrim select 1);
 		_unit action ["TakeWeapon", _pickUpPrim select 0, _pickUpPrim select 1];
 		
 		sleep 3;
 		if(!(_unit getVariable QGVAR(canUseHandgun))) then {
 			_pickUpHandgun = _unit getVariable QGVAR(handgunWeaponHolder);
-			LOG_2("Picking up handgun: %1 , %2", _pickUpHandgun select 0, _pickUpHandgun select 1);
 			_unit action ["TakeWeapon", _pickUpHandgun select 0, _pickUpHandgun select 1];
 		};
 	};
