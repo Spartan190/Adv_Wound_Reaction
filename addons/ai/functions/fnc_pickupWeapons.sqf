@@ -21,7 +21,6 @@ if(GVAR(weaponHandleMode) != 1) exitWith {};
 
 _isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
 _wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
-LOG_2("%1 _wasIncapacitated %2 ",_unit,_wasIncapacitated);
 
 if(!_isIncapacitated && _wasIncapacitated) then {
 	[_unit] spawn {
