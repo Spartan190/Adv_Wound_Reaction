@@ -57,5 +57,33 @@
             <English>The chance the player may use the handgun if incapacitated.</English>
             <German> zu welcher der Spieler die Handwaffe benutzen darf, wenn dieser handlungsunfähig ist.</German>
         </Key>
+        <Key ID="STR_AWR_Player_IncapacitationType_DisplayName">
+            <English>Incapacitation Type</English>
+            <German>Kampfunfähigkeits Art</German>
+        </Key>
+        <Key ID="STR_AWR_Player_IncapacitationType_Description">
+            <English>Determines by which source the incapacitation state is triggerd.</English>
+            <German>Bestimmt auf welche Art die Zustand der Kampfunfähigkeit ausgelöst wird.</German>
+        </Key>
+        <Key ID="STR_AWR_Player_TypePain">
+            <English>Pain</English>
+            <German>Schmerz</German>
+        </Key>
+        <Key ID="STR_AWR_Player_TypeDamage">
+            <English>Damage</English>
+            <German>Schaden</German>
+        </Key>
+        <Key ID="STR_AWR_Player_TypeBoth">
+            <English>Both</English>
+            <German>Beides</German>
+        </Key>
+        <Key ID="STR_AWR_Player_DamageThreshold_DisplayName">
+            <English>Damage Threshold</English>
+            <German>Schadensgrenze</German>
+        </Key>
+        <Key ID="STR_AWR_Player_DamageThreshold_Description">
+            <English>The threshold for the damage level.</English>
+            <German>Die Grenze für den Schadenslevel.</German>
+        </Key>
     </Package>
 </Project>

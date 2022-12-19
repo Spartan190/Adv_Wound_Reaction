@@ -7,6 +7,7 @@
 		params ["_unit"];
 		if(!GVAR(isEnabled) || !isPlayer _unit) exitWith {};
 		_painLevel = _unit call EFUNC(main,getPain);
-		[_unit, _painLevel] spawn FUNC(checkIncapacitatedEH);
+		_damageLevel = _unit call EFUNC(main,getDamage);
+		[_unit, _painLevel,_damageLevel] spawn FUNC(checkIncapacitatedEH);
 	}] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;

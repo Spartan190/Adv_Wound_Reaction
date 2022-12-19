@@ -15,9 +15,21 @@
 *
 * Public: No
 */
-params ["_unit", "_painLevel"];
-if (!alive _unit) exitWith {};
-if (GVAR(isEnabled) && _painLevel >= GVAR(painThreshold)) then {
+params ["_unit", "_painLevel", "_damageLevel"];
+if (!alive _unit || !GVAR(isEnabled)) exitWith {};
+
+private _incapacitatedTriggered = false;
+// pain
+if(GVAR(incapacitationType) in [0,2] && _painLevel >= GVAR(painThreshold)) then {
+	_incapacitatedTriggered = true;
+};
+
+// damage
+if(GVAR(incapacitationType) in [1,2] && _damageLevel >= GVAR(damageThreshold)) then {
+	_incapacitatedTriggered = true;
+};
+
+if (_incapacitatedTriggered) then {
 	_unit setVariable [QEGVAR(main,isIncapacitated), true, true];
 	_isCarryable = [_unit, _painLevel] call FUNC(checkGoProne);
 	[_unit, _painLevel] call FUNC(checkHandleWeapon);
