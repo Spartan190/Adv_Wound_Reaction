@@ -17,6 +17,7 @@
 */
 params ["_unit", "_painLevel", "_damageLevel"];
 if (!alive _unit || !GVAR(isEnabled)) exitWith {};
+private _inDeepWater = _unit call EFUNC(main,inDeepWater);
 
 private _incapacitatedTriggered = false;
 // pain
@@ -31,8 +32,8 @@ if(GVAR(incapacitationType) in [1,2] && _damageLevel >= GVAR(damageThreshold)) t
 
 if (_incapacitatedTriggered) then {
 	_unit setVariable [QEGVAR(main,isIncapacitated), true, true];
-	_isCarryable = [_unit, _painLevel] call FUNC(checkGoProne);
-	[_unit, _painLevel] call FUNC(checkHandleWeapon);	
+	_isCarryable = [_unit,_inDeepWater] call FUNC(checkGoProne);
+	[_unit] call FUNC(checkHandleWeapon);	
 } else {
 	_unit setVariable [QEGVAR(main,isIncapacitated), false, true];
 	[_unit] call FUNC(pickupWeapons);

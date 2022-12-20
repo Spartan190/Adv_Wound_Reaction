@@ -15,7 +15,7 @@
 *
 * Public: No
 */
-params ["_unit", "_painLevel"];
+params ["_unit","_inDeepWater"];
 _wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
 _isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
 if (!_isIncapacitated && _wasIncapacitated) then {	
@@ -23,7 +23,7 @@ if (!_isIncapacitated && _wasIncapacitated) then {
 };
 
 if(!_isIncapacitated) exitWith {false};
-
+if (_inDeepWater) exitWith{false};
 _isProne = false;
 if(GVAR(goProne)) then {
 	if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {

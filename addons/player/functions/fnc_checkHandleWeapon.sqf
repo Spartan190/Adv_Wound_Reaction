@@ -14,7 +14,7 @@
 *
 * Public: No
 */
-params ["_unit"];
+params ["_unit", "_inDeepWater"];
 _isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
 if (GVAR(weaponHandleMode) == 0 || !_isIncapacitated)  exitWith {};
 
@@ -35,7 +35,11 @@ if(_cWeapon == _launcher) then {
 	if(_cWeapon == _pWeapon) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
-				[_unit] call ACEFUNC(hitreactions,throwWeapon);
+				if(_inDeepWater) then {
+					_unit action ["SwitchWeapon", _unit, _unit, -1];
+				} else {
+					[_unit] call ACEFUNC(hitreactions,throwWeapon);
+				};
 			};
 			case 2: {
 				_unit action ["SwitchWeapon", _unit, _unit, -1];
@@ -46,7 +50,11 @@ if(_cWeapon == _launcher) then {
 		if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable QGVAR(canUseHandgun)))) then {
 			switch (GVAR(weaponHandleMode)) do {
 				case 1: {
-					[_unit] call ACEFUNC(hitreactions,throwWeapon);
+					if(_inDeepWater) then {
+						_unit action ["SwitchWeapon", _unit, _unit, -1];
+					} else {
+						[_unit] call ACEFUNC(hitreactions,throwWeapon);
+					};
 				};
 				case 2: {
 					_unit action ["SwitchWeapon", _unit, _unit, -1];

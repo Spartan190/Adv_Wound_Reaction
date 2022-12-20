@@ -15,9 +15,10 @@
 *
 * Public: No
 */
-params ["_unit"];
+params ["_unit","_inDeepWater"];
 if (!(_unit getVariable [QEGVAR(main,isIncapacitated), false])) exitWith {false};
-
+hint "_inDeepWater";
+if (_inDeepWater) exitWith {false};
 _isProne = false;
 if(GVAR(goProne)) then {
 	if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {

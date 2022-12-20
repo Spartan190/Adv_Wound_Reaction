@@ -30,9 +30,10 @@ if(GVAR(incapacitationType) in [1,2] && _damageLevel >= GVAR(damageThreshold)) t
 };
 
 if (_incapacitatedTriggered) then {
+	_inDeepWater = _unit call EFUNC(main,inDeepWater);
 	_unit setVariable [QEGVAR(main,isIncapacitated), true, true];
-	_isCarryable = [_unit, _painLevel] call FUNC(checkGoProne);
-	[_unit, _painLevel] call FUNC(checkHandleWeapon);
+	_isCarryable = [_unit,_inDeepWater] call FUNC(checkGoProne);
+	[_unit, _inDeepWater] call FUNC(checkHandleWeapon);
 } else {
 	_unit setVariable [QEGVAR(main,isIncapacitated), false, true];
 };

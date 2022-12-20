@@ -14,11 +14,9 @@
 *
 * Public: No
 */
-params ["_unit","_painLevel"];
+params ["_unit"];
 _isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
 if (GVAR(weaponHandleMode) == 0)  exitWith {};
-
-
 
 _wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
 
