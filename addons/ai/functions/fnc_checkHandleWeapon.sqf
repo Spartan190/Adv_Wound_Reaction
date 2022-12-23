@@ -19,7 +19,6 @@ _isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
 if (GVAR(weaponHandleMode) == 0)  exitWith {};
 
 _wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
-
 _pWeapon = primaryWeapon _unit;
 _handgun = handgunWeapon _unit;
 _cWeapon = currentWeapon _unit;

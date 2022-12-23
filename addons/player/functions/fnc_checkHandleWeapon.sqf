@@ -28,14 +28,14 @@ _cWeapon = currentWeapon _unit;
 if(!_wasIncapacitated) then {
 	_unit setVariable [QGVAR(canUseHandgun), GVAR(handgunChance) > random 100 ,true];
 };
-
+_isInVehicle = !(isNull objectParent _unit);
 if(_cWeapon == _launcher) then {
 	_unit action ["SwitchWeapon", _unit, _unit, -1];
 } else {
 	if(_cWeapon == _pWeapon) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
-				if(_inDeepWater) then {
+				if(_inDeepWater || _isInVehicle) then {
 					_unit action ["SwitchWeapon", _unit, _unit, -1];
 				} else {
 					[_unit] call ACEFUNC(hitreactions,throwWeapon);
@@ -50,7 +50,7 @@ if(_cWeapon == _launcher) then {
 		if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable QGVAR(canUseHandgun)))) then {
 			switch (GVAR(weaponHandleMode)) do {
 				case 1: {
-					if(_inDeepWater) then {
+					if(_inDeepWater || _isInVehicle) then {
 						_unit action ["SwitchWeapon", _unit, _unit, -1];
 					} else {
 						[_unit] call ACEFUNC(hitreactions,throwWeapon);

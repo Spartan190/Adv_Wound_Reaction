@@ -17,6 +17,7 @@
 */
 params ["_unit","_inDeepWater"];
 if (!(_unit getVariable [QEGVAR(main,isIncapacitated), false])) exitWith {false};
+if !(isNull objectParent _unit) exitWith {false};
 if (_inDeepWater) exitWith {false};
 _isProne = false;
 if(GVAR(goProne)) then {
