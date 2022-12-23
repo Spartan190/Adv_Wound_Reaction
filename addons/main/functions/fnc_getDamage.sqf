@@ -15,7 +15,16 @@
 * Public: No
 */
 params ["_unit"];
-private _bodyPartDamage = _unit getVariable [QACEVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+//private _bodyPartDamage = _unit getVariable [QACEVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 private _damageSum = 0.0;
-{ _damageSum = _damageSum + _x} forEach _bodyPartDamage;
+
+_openWounds = _unit getVariable [QACEVAR(medical,openWounds), []];
+// Exclude non penetrating body damage
+{
+    _x params ["", "_bodyPartN", "_amountOf", "", "_damage"];
+    if (_damage >= ACEVAR(medical,const_penetrationThreshold)) then {
+        _damageSum = _damageSum + (_amountOf * _damage);
+    };
+} forEach _openWounds;
+
 _damageSum;

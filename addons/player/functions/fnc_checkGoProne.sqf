@@ -17,7 +17,6 @@
 */
 params ["_unit","_inDeepWater"];
 if (!(_unit getVariable [QEGVAR(main,isIncapacitated), false])) exitWith {false};
-hint "_inDeepWater";
 if (_inDeepWater) exitWith {false};
 _isProne = false;
 if(GVAR(goProne)) then {
