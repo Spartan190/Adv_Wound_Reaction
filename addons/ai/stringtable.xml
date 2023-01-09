@@ -85,13 +85,29 @@
             <English>Both</English>
             <German>Beides</German>
         </Key>
-        <Key ID="STR_AWR_AI_DamageThreshold_DisplayName">
-            <English>Damage Threshold</English>
-            <German>Schadensgrenze</German>
+        <Key ID="STR_AWR_AI_BodyDamageThreshold_DisplayName">
+            <English>Body Damage Threshold</English>
+            <German>Körper Schadensschwelle</German>
         </Key>
-        <Key ID="STR_AWR_AI_DamageThreshold_Description">
-            <English>The threshold for the damage level.</English>
-            <German>Die Grenze für den Schadenslevel.</German>
+        <Key ID="STR_AWR_AI_BodyDamageThreshold_Description">
+            <English>The threshold to trigger incapacitation fom body damage.</English>
+            <German>Der Schwellwert bei dem die Kampfunfähigkeit durch Körperschaden ausgelöst wird.</German>
+        </Key>
+        <Key ID="STR_AWR_AI_ArmsDamageThreshold_DisplayName">
+            <English>Arms Damage Threshold</English>
+            <German>Arme Schadensschwelle</German>
+        </Key>
+        <Key ID="STR_AWR_AI_ArmsDamageThreshold_Description">
+            <English>The threshold for the damage for the arms. If one arm is hurt the primary weapon is unusable. If both arms are hurt then the handgun will also be unasable.</English>
+            <German>Der Schwellwert für die Arme. Wenn ein Arm verletzt ist, wird die Hauptwaffe unbrauchbar. Sind beide Arme verletzt, wird auch die Seitenwaffe unbrauchbar.</German>
+        </Key>
+        <Key ID="STR_AWR_AI_LegsDamageThreshold_DisplayName">
+            <English>Legs Damage Threshold</English>
+            <German>Beine Schadensschwelle</German>
+        </Key>
+        <Key ID="STR_AWR_AI_LegsDamageThreshold_Description">
+            <English>The threshold for the legs damage. If one leg is hurt the unit starts limping. When both legs are hurt the unit is unable to stand up.</English>
+            <German>Der Schwellwert für die Beine. Ist ein Bein verletzt, fängt die Einheit an zu humpeln. Sind beide Beine verletzt, kann die Einheit nicht mehr stehen.</German>
         </Key>
     </Package>
 </Project>

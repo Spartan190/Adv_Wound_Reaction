@@ -15,18 +15,19 @@
 *
 * Public: No
 */
-params ["_unit","_inDeepWater"];
-_wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
-_isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
-if (!_isIncapacitated && _wasIncapacitated) then {	
-	_unit setUnitPos "AUTO";
-};
+params ["_unit","_oldBodyAreasStates","_newBodyAreasStates","_inDeepWater"];
+_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
+_isIncapacitated = _bodyState == 2 || _legsState == 2;
+_wasIncapacitated =_oldBodyState == 2 || _oldLegsState == 2;
 
-if(!_isIncapacitated) exitWith {false};
+
+if (!(_isIncapacitated)) exitWith {false};
 if !(isNull objectParent _unit) exitWith {false};
-if (_inDeepWater) exitWith{false};
+if (_inDeepWater) exitWith {false};
 _isProne = false;
 if(GVAR(goProne)) then {
+	// TODO: Add Limping
 	if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
 		_noWeaponAnim = "amovppnemstpsnonwnondnon";
 		if("" == currentWeapon _unit) then {
@@ -37,7 +38,6 @@ if(GVAR(goProne)) then {
 		} else {
 			[_unit] call ACEFUNC(common,setProne);
 		};
-		_unit setUnitPos "DOWN";
 	} else {
 		_isProne = true;
 	};

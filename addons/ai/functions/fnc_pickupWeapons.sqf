@@ -16,26 +16,21 @@
 * Public: No
 */
 
-params["_unit"];
+params["_unit","_secondaryOnly"];
 if(GVAR(weaponHandleMode) != 1) exitWith {};
 
-_isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
-_wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
-
-if(!_isIncapacitated && _wasIncapacitated) then {
-	[_unit] spawn {
-		params["_unit"];
-		_pickUpPrim = _unit getVariable [QGVAR(primaryWeaponHolder),[]];
-		if((count _pickUpPrim) > 0) then {
-			_unit action ["TakeWeapon", _pickUpPrim select 0, _pickUpPrim select 1];
-		};
-		
-		sleep 3;
-		if(!(_unit getVariable QGVAR(canUseHandgun))) then {
-			_pickUpHandgun = _unit getVariable [QGVAR(handgunWeaponHolder),[]];
-			if((count _pickUpHandgun) > 0) then {
-				_unit action ["TakeWeapon", _pickUpHandgun select 0, _pickUpHandgun select 1];
-			};
+[_unit] spawn {
+	params["_unit"];
+	_pickUpPrim = _unit getVariable [QGVAR(primaryWeaponHolder),[]];
+	if((count _pickUpPrim) > 0) then {
+		_unit action ["TakeWeapon", _pickUpPrim select 0, _pickUpPrim select 1];
+	};
+	
+	sleep 3;
+	if(!(_unit getVariable QGVAR(canUseHandgun))) then {
+		_pickUpHandgun = _unit getVariable [QGVAR(handgunWeaponHolder),[]];
+		if((count _pickUpHandgun) > 0) then {
+			_unit action ["TakeWeapon", _pickUpHandgun select 0, _pickUpHandgun select 1];
 		};
 	};
 };

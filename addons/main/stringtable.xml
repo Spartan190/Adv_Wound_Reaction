@@ -33,5 +33,21 @@
             <English>https://github.com/Spartan190/Adv_Wound_Reaction</English>
             <German>https://github.com/Spartan190/Adv_Wound_Reaction</German>
         </Key>
+        <Key ID="STR_AWR_Main_DamageIgnoreLevel_DisplayName">
+            <English>Wound Ignore Type</English>
+            <German>Wunden Ignorieren Art</German>
+        </Key>
+        <Key ID="STR_AWR_Main_DamageIgnoreLevel_Description">
+            <English>Determines when a wound is ignored for the damage calculation.</English>
+            <German>Bestimmt wann eine Wunde für die Schadensberechnung ignoriert wird.</German>
+        </Key>
+        <Key ID="STR_AWR_Main_DamageIgnoreLevel_AfterBandage">
+            <English>After Bandaging</English>
+            <German>Nach Bandagieren</German>
+        </Key>
+        <Key ID="STR_AWR_Main_DamageIgnoreLevel_AfterStitching">
+            <English>After Stitching</English>
+            <German>Nach Nähen</German>
+        </Key>
     </Package>
 </Project>

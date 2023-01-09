@@ -1,4 +1,6 @@
 PREP(canDrag);
 PREP(getPain);
-PREP(getDamage);
+PREP(getAreaStates);
+PREP(getPartsStatesByPain);
+PREP(getPartsStatesByDamage);
 PREP(inDeepWater);

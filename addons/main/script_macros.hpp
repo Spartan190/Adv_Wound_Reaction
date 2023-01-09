@@ -9,4 +9,9 @@
 #define ACE_GET_PAIN(unit) (unit getVariable [QACEVAR(medical,pain), 0])
 #define ACE_GET_PAIN_SUPP(unit) (unit getVariable [QACEVAR(medical,painSuppress),0])
 #define ACE_GET_PAIN_PERCEIVED(unit) (0 max (ACE_GET_PAIN(unit) - ACE_GET_PAIN_SUPP(unit)) min 1)
+#define GET_BODY_DAMAGE_THRESHOLD(unit)  ([GVAR(ai_bodyDamageThreshold),GVAR(player_bodyDamageThreshold)] select (isPlayer unit))
+#define GET_ARMS_DAMAGE_THRESHOLD(unit)  ([GVAR(ai_armsDamageThreshold),GVAR(player_armsDamageThreshold)] select (isPlayer unit))
+#define GET_LEGS_DAMAGE_THRESHOLD(unit)  ([GVAR(ai_legsDamageThreshold),GVAR(player_legsDamageThreshold)] select (isPlayer unit))
+#define GET_PAIN_THRESHOLD(unit) ([EGVAR(ai,painThreshold),EGVAR(player,painThreshold)] select (isPlayer unit))
+#define GET_INCAPACITATION_TYPE(unit) ([EGVAR(ai,incapacitationType),EGVAR(player,incapacitationType)] select (isPlayer unit))
 

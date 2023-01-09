@@ -14,25 +14,34 @@
 *
 * Public: No
 */
-params ["_unit", "_inDeepWater"];
-_isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
-if (GVAR(weaponHandleMode) == 0 || !_isIncapacitated)  exitWith {};
+params ["_unit","_oldBodyAreasStates","_newBodyAreasStates","_inDeepWater"];
+
+if (GVAR(weaponHandleMode) == 0)  exitWith {};
 
 
-_wasIncapacitated = _unit getVariable [QGVAR(wasIncapacitated), false];
+_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
+_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+_isIncapacitated = _bodyState == 2 || _armsState == 2;
+_wasIncapacitated =_oldBodyState == 2 || _oldArmsState == 2;
+
+if(_isIncapacitated != _wasIncapacitated) then {
+	_canUseHandgun = (_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100));
+	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
+};
+
+if(_bodyState < 2 && _armsState == 0) exitWith {};
+
 _pWeapon = primaryWeapon _unit;
 _launcher = secondaryWeapon _unit;
 _handgun = handgunWeapon _unit;
 _cWeapon = currentWeapon _unit;
 
-if(!_wasIncapacitated) then {
-	_unit setVariable [QGVAR(canUseHandgun), GVAR(handgunChance) > random 100 ,true];
-};
 _isInVehicle = !(isNull objectParent _unit);
-if(_cWeapon == _launcher) then {
+
+if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
 	_unit action ["SwitchWeapon", _unit, _unit, -1];
 } else {
-	if(_cWeapon == _pWeapon) then {
+	if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
 				if(_inDeepWater || _isInVehicle) then {

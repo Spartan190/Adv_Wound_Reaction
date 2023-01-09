@@ -1,4 +1,4 @@
-PREP(checkGoProne);
-PREP(checkHandleWeapon);
+PREP(handleLegsDamage);
+PREP(handleWeaponUsage);
 PREP(pickupWeapons);
 PREP(checkIncapacitatedEH);
