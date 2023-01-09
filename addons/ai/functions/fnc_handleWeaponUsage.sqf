@@ -37,8 +37,8 @@ if(_isIncapacitated != _wasIncapacitated) then {
 
 if(_bodyState < 2 && _armsState == 0) exitWith {};
 
-
-if(_cWeapon != "" && _cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
+if(_cWeapon == "") exitWith {};
+if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
 	switch (GVAR(weaponHandleMode)) do {
 		case 1: {
 			_pHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);
@@ -47,7 +47,7 @@ if(_cWeapon != "" && _cWeapon == _pWeapon && (_isIncapacitated || _armsState == 
 	};
 } else {
 	_ignoreIndex = EGVAR(main,ignoreChanceClasses) findIf {_handgun == _x || _handgun isKindOf _x};
-	if(_cWeapon != "" && _cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable [QGVAR(canUseHandgun), true]))) then {
+	if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable [QGVAR(canUseHandgun), true]))) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
 				_hHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);

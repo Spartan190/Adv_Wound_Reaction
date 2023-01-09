@@ -35,7 +35,6 @@ _isAceLimping = _unit getVariable [QACEVAR(medical,isLimping), false];
 if(_legsState == 1) then {
 	_unitHitDamage = _unit getHitPointDamage "HitLegs";
 	if(!(_isAceLimping) && (_unitHitDamage < 0.5)) then {
-		hint format ["Setting Limping: %1",_unitHitDamage];
 		_unit setHitPointDamage ["HitLegs", 1];
 	};
 } else { 

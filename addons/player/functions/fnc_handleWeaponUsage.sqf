@@ -38,7 +38,10 @@ _cWeapon = currentWeapon _unit;
 
 _isInVehicle = !(isNull objectParent _unit);
 
+if(_cWeapon == "") exitWith {};
+
 if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
+	SHOW_HINT(localize LSTRING(UNABLE_TO_USE_WEAPON));
 	_unit action ["SwitchWeapon", _unit, _unit, -1];
 } else {
 	if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
@@ -49,9 +52,11 @@ if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
 				} else {
 					[_unit] call ACEFUNC(hitreactions,throwWeapon);
 				};
+				SHOW_HINT(localize LSTRING(UNABLE_TO_USE_WEAPON));
 			};
 			case 2: {
 				_unit action ["SwitchWeapon", _unit, _unit, -1];
+				SHOW_HINT(localize LSTRING(UNABLE_TO_USE_WEAPON));
 			};			
 		};
 	} else {
@@ -64,9 +69,11 @@ if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
 					} else {
 						[_unit] call ACEFUNC(hitreactions,throwWeapon);
 					};
+					SHOW_HINT(localize LSTRING(UNABLE_TO_USE_WEAPON));
 				};
 				case 2: {
 					_unit action ["SwitchWeapon", _unit, _unit, -1];
+					SHOW_HINT(localize LSTRING(UNABLE_TO_USE_WEAPON));
 				};
 			};
 		};

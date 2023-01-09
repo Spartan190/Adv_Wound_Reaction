@@ -109,5 +109,13 @@
             <English>The threshold for the legs damage. If one leg is hurt the unit starts limping. When both legs are hurt the unit is unable to stand up.</English>
             <German>Der Schwellwert für die Beine. Ist ein Bein verletzt, fängt die Einheit an zu humpeln. Sind beide Beine verletzt, kann die Einheit nicht mehr stehen.</German>
         </Key>
+        <Key ID="STR_AWR_Player_UNABLE_TO_USE_WEAPON">
+            <English>You are too hurt to use the weapon.</English>
+            <German>Du bist zu stark verletzt, um diese Waffe zu benutzen.</German>
+        </Key>
+        <Key ID="STR_AWR_Player_UNABLE_TO_STAND">
+            <English>You are too hurt to stand up.</English>
+            <German>Du bist zu stark verletzt, um zu stehen.</German>
+        </Key>
     </Package>
 </Project>
