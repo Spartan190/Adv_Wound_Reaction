@@ -39,10 +39,6 @@ if((_oldBodyState > _bodyState) || (_oldArmsState > _armsState)) then {
 	};
 };
 
-
-
-if(_bodyState > 0 || _legsState > 0) then {
-	_isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
-};
+_isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
 
 _unit setVariable [QGVAR(oldBodyAreasStates), _bodyAreasStates, true];

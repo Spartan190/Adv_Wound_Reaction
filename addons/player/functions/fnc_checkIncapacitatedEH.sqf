@@ -27,8 +27,7 @@ _oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
 [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleWeaponUsage);
 
-if(_bodyState > 0 || _legsState > 0) then {
-	_isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
-};
+
+_isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
 
 _unit setVariable [QGVAR(oldBodyAreasStates), _bodyAreasStates, true];
