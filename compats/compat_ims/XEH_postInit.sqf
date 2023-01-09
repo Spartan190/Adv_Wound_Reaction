@@ -4,6 +4,7 @@
 ["CBA_settingsInitialized", {
 	if (!hasInterface) exitWith {};
 	["ace_medical_handleUnitVitals", {
+		// TODO: rework logic with new damage determination
 		params ["_unit"];
 		if(!EGVAR(player,isEnabled) || !EGVAR(ai,isEnabled)) exitWith {};
 		_isIncapacitated = _unit getVariable [QEGVAR(main,isIncapacitated), false];
