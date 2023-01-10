@@ -49,5 +49,13 @@
             <English>After Stitching</English>
             <German>Nach Nähen</German>
         </Key>
+        <Key ID="STR_AWR_Main_Hints_DisplayName">
+            <English>Display Hints</English>
+            <German>Hinweise anzeigen</German>
+        </Key>
+        <Key ID="STR_AWR_Main_Hints_Description">
+            <English>Enable to display hints to the player e.g. if a weapon can't be used because he is too hurt.</English>
+            <German>Aktivieren, um dem Spieler Hinweise anzuzeigen z.B. wenn eine Waffe nicht benutzt werden kann, da dieser zu stark verletzt ist.</German>
+        </Key>
     </Package>
 </Project>

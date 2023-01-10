@@ -55,11 +55,14 @@ if((_headDamage >= _bodyDamageThreshold / 2) || {_bodyDamage >= _bodyDamageThres
     _areaDamages set [0, 0];
 };
 
+_fractures = (_unit getVariable [QACEVAR(medical,fractures),[0,0,0,0,0,0]]);
+_fractures params ["_headHasFracture","_bodyHasFracture","_leftArmHasFracture","_rightArmHasFracture","_leftLegHasFracture","_rightLegHasFracture"];
+
 _armsDamageThreshold = GET_ARMS_DAMAGE_THRESHOLD(_unit);
-if(((_leftArmDamage >= _armsDamageThreshold) && (_rightArmDamage >= _armsDamageThreshold))) then {
+if(((_leftArmDamage >= _armsDamageThreshold || _leftArmHasFracture == 1) && (_rightArmDamage >= _armsDamageThreshold || _rightArmHasFracture == 1))) then {
     _areaDamages set [1, 2]; // both arms injured so it's critical
 } else {
-    if((_leftArmDamage >= _armsDamageThreshold) || (_rightArmDamage >= _armsDamageThreshold)) then {
+    if((_leftArmDamage >= _armsDamageThreshold || _leftArmHasFracture == 1) || (_rightArmDamage >= _armsDamageThreshold || _rightArmHasFracture == 1)) then {
         _areaDamages set [1, 1]; // only left arm is injured so we keep the pistol but not the primary weapon
     } else {
         _areaDamages set [1, 0]; // both legs are fine
@@ -67,10 +70,10 @@ if(((_leftArmDamage >= _armsDamageThreshold) && (_rightArmDamage >= _armsDamageT
 };
 
 _legsDamageThreshold = GET_LEGS_DAMAGE_THRESHOLD(_unit);
-if((_leftLegDamage >= _legsDamageThreshold) && (_rightLegDamage >= _legsDamageThreshold)) then {
+if((_leftLegDamage >= _legsDamageThreshold || _leftLegHasFracture == 1) && (_rightLegDamage >= _legsDamageThreshold || _rightLegHasFracture == 1)) then {
     _areaDamages set [2, 2]; // both legs injured so it's critical
 } else {
-    if((_leftLegDamage >= _legsDamageThreshold) || (_rightLegDamage >= _legsDamageThreshold)) then {
+    if((_leftLegDamage >= _legsDamageThreshold || _leftLegHasFracture == 1) || (_rightLegDamage >= _legsDamageThreshold || _rightLegHasFracture == 1)) then {
         _areaDamages set [2, 1]; // only one leg is injured so we start limping
     } else {
         _areaDamages set [2, 0]; // both legs are fine

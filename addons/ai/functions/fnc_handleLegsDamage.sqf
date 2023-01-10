@@ -43,7 +43,7 @@ if(_legsState == 1) then {
 	};
 };
 
-if(GVAR(goProne) && (_legsState == 2)) then {
+if(GVAR(goProne) && (_legsState == 2 || _bodyState == 2)) then {
 	if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
 		_noWeaponAnim = "amovppnemstpsnonwnondnon";
 		if("" == currentWeapon _unit) then {

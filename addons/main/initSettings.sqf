@@ -35,7 +35,7 @@
     "SLIDER", // setting type
     [ELSTRING(ai,BodyDamageThreshold_DisplayName), ELSTRING(ai,BodyDamageThreshold_Description)], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     [ELSTRING(main,Category), ELSTRING(ai,SubCategory)], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0, 100, 25, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0, 100, 1, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
     true // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 ] call CBA_fnc_addSetting;
 
@@ -44,7 +44,7 @@
     "SLIDER", // setting type
     [ELSTRING(ai,ArmsDamageThreshold_DisplayName), ELSTRING(ai,ArmsDamageThreshold_Description)], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     [ELSTRING(main,Category), ELSTRING(ai,SubCategory)], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0, 100, 25, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0, 100, 1, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
     true // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 ] call CBA_fnc_addSetting;
 
@@ -53,7 +53,7 @@
     "SLIDER", // setting type
     [ELSTRING(ai,LegsDamageThreshold_DisplayName), ELSTRING(ai,LegsDamageThreshold_Description)], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     [ELSTRING(main,Category), ELSTRING(ai,SubCategory)], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0, 100, 25, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0, 100, 1, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
     true // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 ] call CBA_fnc_addSetting;
 
@@ -64,7 +64,7 @@
     "SLIDER", // setting type
     [ELSTRING(player,BodyDamageThreshold_DisplayName), ELSTRING(player,BodyDamageThreshold_Description)], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     [ELSTRING(main,Category), ELSTRING(player,SubCategory)], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0, 100, 25, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0, 100, 1, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
     true // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 ] call CBA_fnc_addSetting;
 
@@ -73,7 +73,7 @@
     "SLIDER", // setting type
     [ELSTRING(player,ArmsDamageThreshold_DisplayName), ELSTRING(player,ArmsDamageThreshold_Description)], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     [ELSTRING(main,Category), ELSTRING(player,SubCategory)], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0, 100, 25, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0, 100, 1, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
     true // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 ] call CBA_fnc_addSetting;
 
@@ -82,6 +82,6 @@
     "SLIDER", // setting type
     [ELSTRING(player,LegsDamageThreshold_DisplayName), ELSTRING(player,LegsDamageThreshold_Description)], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     [ELSTRING(main,Category), ELSTRING(player,SubCategory)], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0, 100, 25, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0, 100, 1, 2], // data for this setting: [min, max, default, number of shown trailing decimals]
     true // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 ] call CBA_fnc_addSetting;
