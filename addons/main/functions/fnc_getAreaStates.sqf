@@ -23,25 +23,24 @@
 *
 * Public: No
 */
+
+// TODO Fix if set to both
 params ["_unit","_incapacitationType"];
 private _areaDamages = [0,0,0]; // body/head, arms, legs
 
+_painStates = [0,0,0];
 // pain
 if(_incapacitationType in [0,2]) then {
     _painStates = [_unit] call FUNC(getPartsStatesByPain);
-    _areaDamages set [0, (_areaDamages select 0) max (_painStates select 0)];
-    _areaDamages set [1, (_areaDamages select 1) max (_painStates select 1)];
-    _areaDamages set [2, (_areaDamages select 2) max (_painStates select 2)];
 };
-
+_damageStates = [0,0,0];
 // damage
 if(_incapacitationType in [1,2]) then {
     _damageStates = [_unit] call FUNC(getPartsStatesByDamage);
-    _areaDamages set [0, (_areaDamages select 0) max (_damageStates select 0)];
-    _areaDamages set [1, (_areaDamages select 1) max (_damageStates select 1)];
-    _areaDamages set [2, (_areaDamages select 2) max (_damageStates select 2)];
 };
-
+_areaDamages set [0, (_painStates select 0) max (_damageStates select 0)];
+_areaDamages set [1, (_painStates select 1) max (_damageStates select 1)];
+_areaDamages set [2, (_painStates select 2) max (_damageStates select 2)];
 _areaDamages; // return the areaDamages
 
 /*

@@ -15,7 +15,7 @@
 *
 * Public: No
 */
-params ["_unit", "_painLevel", "_bodyAreasStates"];
+params ["_unit", "_bodyAreasStates"];
 if (!alive _unit || !GVAR(isEnabled)) exitWith {};
 private _inDeepWater = _unit call EFUNC(main,inDeepWater);
 private _oldBodyAreasStates = _unit getVariable [QGVAR(oldBodyAreasStates), [0,0,0]];
