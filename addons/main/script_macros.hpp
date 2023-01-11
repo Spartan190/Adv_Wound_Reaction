@@ -14,5 +14,6 @@
 #define GET_LEGS_DAMAGE_THRESHOLD(unit)  ([GVAR(ai_legsDamageThreshold),GVAR(player_legsDamageThreshold)] select (isPlayer unit))
 #define GET_PAIN_THRESHOLD(unit) ([EGVAR(ai,painThreshold),EGVAR(player,painThreshold)] select (isPlayer unit))
 #define GET_INCAPACITATION_TYPE(unit) ([EGVAR(ai,incapacitationType),EGVAR(player,incapacitationType)] select (isPlayer unit))
+#define GET_LIMBS_DAMAGE_MODE(unit) ([EGVAR(ai,limbHandleMode),EGVAR(player,limbHandleMode)] select (isPlayer unit))
 #define SHOW_HINT(message) if(awr_main_displayHints) then { 0 spawn { hintSilent message; sleep 5; hintSilent ""; }; }
 

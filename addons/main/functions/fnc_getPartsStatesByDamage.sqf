@@ -55,14 +55,20 @@ if((_headDamage >= _bodyDamageThreshold / 2) || {_bodyDamage >= _bodyDamageThres
     _areaDamages set [0, 0];
 };
 
+_limbDamageMode = GET_LIMBS_DAMAGE_MODE(_unit);
+if(_limbDamageMode == 0) exitWith{_areaDamages};
+
 _fractures = (_unit getVariable [QACEVAR(medical,fractures),[0,0,0,0,0,0]]);
 _fractures params ["_headHasFracture","_bodyHasFracture","_leftArmHasFracture","_rightArmHasFracture","_leftLegHasFracture","_rightLegHasFracture"];
 
 _armsDamageThreshold = GET_ARMS_DAMAGE_THRESHOLD(_unit);
-if(((_leftArmDamage >= _armsDamageThreshold || _leftArmHasFracture == 1) && (_rightArmDamage >= _armsDamageThreshold || _rightArmHasFracture == 1))) then {
+
+_leftArmHurt = ((_limbDamageMode in [1,3] && _leftArmDamage >= _armsDamageThreshold) || (_limbDamageMode in [2,3] && _leftArmHasFracture == 1));
+_rightArmHurt = ((_limbDamageMode in [1,3] && _rightArmDamage >= _armsDamageThreshold) || (_limbDamageMode in [2,3] && _rightArmHasFracture == 1));
+if((_leftArmHurt && _rightArmHurt)) then {
     _areaDamages set [1, 2]; // both arms injured so it's critical
 } else {
-    if((_leftArmDamage >= _armsDamageThreshold || _leftArmHasFracture == 1) || (_rightArmDamage >= _armsDamageThreshold || _rightArmHasFracture == 1)) then {
+    if((_leftArmHurt) || (_rightArmHurt)) then {
         _areaDamages set [1, 1]; // only left arm is injured so we keep the pistol but not the primary weapon
     } else {
         _areaDamages set [1, 0]; // both legs are fine
@@ -70,10 +76,12 @@ if(((_leftArmDamage >= _armsDamageThreshold || _leftArmHasFracture == 1) && (_ri
 };
 
 _legsDamageThreshold = GET_LEGS_DAMAGE_THRESHOLD(_unit);
-if((_leftLegDamage >= _legsDamageThreshold || _leftLegHasFracture == 1) && (_rightLegDamage >= _legsDamageThreshold || _rightLegHasFracture == 1)) then {
+_leftLegHurt = ((_limbDamageMode in [1,3] && _leftLegDamage >= _legsDamageThreshold) || (_limbDamageMode in [2,3] && _leftLegHasFracture == 1));
+_rightLegHurt = ((_limbDamageMode in [1,3] && _rightLegDamage >= _legsDamageThreshold) || (_limbDamageMode in [2,3] && _rightLegHasFracture == 1));
+if(_leftLegHurt && _rightLegHurt) then {
     _areaDamages set [2, 2]; // both legs injured so it's critical
 } else {
-    if((_leftLegDamage >= _legsDamageThreshold || _leftLegHasFracture == 1) || (_rightLegDamage >= _legsDamageThreshold || _rightLegHasFracture == 1)) then {
+    if(_leftLegHurt || _rightLegHurt) then {
         _areaDamages set [2, 1]; // only one leg is injured so we start limping
     } else {
         _areaDamages set [2, 0]; // both legs are fine

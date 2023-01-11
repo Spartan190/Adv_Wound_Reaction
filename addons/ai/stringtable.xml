@@ -109,5 +109,29 @@
             <English>The threshold for the legs damage. If one leg is hurt the unit starts limping. When both legs are hurt the unit is unable to stand up.</English>
             <German>Der Schwellwert für die Beine. Ist ein Bein verletzt, fängt die Einheit an zu humpeln. Sind beide Beine verletzt, kann die Einheit nicht mehr stehen.</German>
         </Key>
+        <Key ID="STR_AWR_AI_LimbHandleMode_DisplayName">
+            <English>Limbs Damage Mode</English>
+            <German>Gliedmaßen Schadenstyp</German>
+        </Key>
+        <Key ID="STR_AWR_AI_LimbHandleMode_Description">
+            <English>The way limbs damage will be handled.\nNone: No reaction to damage in limbs\nDamage: Reaction is only based on the damage threshold.\nFractures: Reactions will only trigger on fractures.\nBoth: Reaction will trigger in both cases.</English>
+            <German>Die Weise wie der Schaden von Gliedmaßen behandelt wird.\nKein: Keine Reaktion bei Schaden an den Gliedmaßen\nSchaden: Reaktion basiert auf der Schadensschwelle\nFrakturen: Reaktion wird nur durch Frakturen ausgelöst\nBeides: Reaktion wird in beiden fällen ausgelöst</German>
+        </Key>
+        <Key ID="STR_AWR_AI_LimbModeNone">
+            <English>None</English>
+            <German>Kein</German>
+        </Key>
+        <Key ID="STR_AWR_AI_LimbModeDamage">
+            <English>Damage</English>
+            <German>Schaden</German>
+        </Key>
+        <Key ID="STR_AWR_AI_LimbModeFractures">
+            <English>Fractures</English>
+            <German>Frakturen</German>
+        </Key>
+        <Key ID="STR_AWR_AI_LimbModeBoth">
+            <English>Both</English>
+            <German>Beides</German>
+        </Key>
     </Package>
 </Project>
