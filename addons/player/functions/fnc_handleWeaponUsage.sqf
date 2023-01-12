@@ -24,7 +24,7 @@ _oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 _isIncapacitated = _bodyState == 2 || _armsState == 2;
 _wasIncapacitated =_oldBodyState == 2 || _oldArmsState == 2;
 
-if(_isIncapacitated != _wasIncapacitated) then {
+if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 	_canUseHandgun = (_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100));
 	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
 };

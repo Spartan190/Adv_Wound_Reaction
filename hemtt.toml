@@ -4,6 +4,18 @@ author = "[79AD] S. Spartan"
 template = "cba"
 mainprefix = "z"
 include = ["./include"]
-files = ["mod.cpp"]
-folder_optionals = true
+files = [
+    "mod.cpp",
+    "AWR_logo.paa",
+    "LICENSE",
+    "meta.cpp"
+]
+optional_mod_folders = true
 sig_version = 3
+
+releasebuild = [
+    "@zip ace3_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+]
+
+[header_exts]
+version= "{{git \"id 8\"}}"
