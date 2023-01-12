@@ -30,7 +30,7 @@ _painLevel = _unit call FUNC(getPain);
 _painThreshold = GET_PAIN_THRESHOLD(_unit);
 
 if(_painLevel >= _painThreshold) then {
-	_bodyPartsDamages = [2,2,2];
+	_bodyPartsDamages = [2,0,0];
 };
 
 _bodyPartsDamages;
