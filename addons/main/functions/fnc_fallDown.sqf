@@ -10,15 +10,15 @@
 * None
 *
 * Example:
-* [ACE_player] call awr_main_fnc_fallDown
+* [ACE_player, 1, true] call awr_main_fnc_fallDown
 *
 * Public: No
 */
 
-params ["_unit"];
-[_unit] spawn {
-	params ["_unit"];
+params ["_unit", ["_wakeUpTime", 1, [1]]];
+[_unit, _wakeUpTime] spawn {
+	params ["_unit", "_wakeUpTime"];
 	[_unit, true] call ACEFUNC(medical_engine,setUnconsciousAnim);
-	sleep 1;
+	sleep _wakeUpTime;
 	[_unit, false] call ACEFUNC(medical_engine,setUnconsciousAnim);
 };

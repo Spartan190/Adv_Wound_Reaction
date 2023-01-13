@@ -142,5 +142,21 @@ None: No reaction to damage in limbs\nDamage: Reaction is only based on the dama
             <English>Both</English>
             <German>Beides</German>
         </Key>
+        <Key ID="STR_AWR_Player_PlayFallAnimation_DisplayName">
+            <English>Use falling animation</English>
+            <German>Fall Animation benutzen</German>
+        </Key>
+        <Key ID="STR_AWR_Player_PlayFallAnimation_Description">
+            <English>Determines if an animation shall be played if legs reaction is triggered.</English>
+            <German>Bestimmt, ob eine Animation abgespielt werden soll, wenn die Reaktionen für die Beine ausgelöst werden.</German>
+        </Key>
+        <Key ID="STR_AWR_Player_Concussion_DisplayName">
+            <English>Concussion?</English>
+            <German>Gehirnerschütterung?</German>
+        </Key>
+        <Key ID="STR_AWR_Player_Concussion_Description">
+            <English>If enabled a concussion effect will be applied when hit in the head. The player will fall to the ground, vision is blurred and hearing is lowered for a short amount of time.</English>
+            <German>Wenn aktiviert wird beim Treffer in den Kopf ein Gehirnerschütterungseffekt angewendet. Der Spieler fällt zu Boden, die Sicht ist verschwommen und das Gehört ist verringert für eine kurze Zeit.</German>
+        </Key>
     </Package>
 </Project>
