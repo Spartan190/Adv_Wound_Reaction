@@ -31,9 +31,9 @@ _handgun = handgunWeapon _unit;
 _cWeapon = currentWeapon _unit;
 
 if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
-	_canUseHandgun = (_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100));
+	_canUseHandgun = ((_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100)));
 	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
-	if(_bodyState == 2 || _armsState == 2 && !_canUseHandgun) then {
+	if((_bodyState == 2 && !_canUseHandgun) || _armsState == 2) then {
 		_unit disableAI "TARGET";
 	} else {
 		_unit enableAI "TARGET";

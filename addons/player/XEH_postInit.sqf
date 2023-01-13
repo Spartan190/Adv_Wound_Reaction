@@ -13,16 +13,19 @@
 	[QACEVAR(medical,woundReceived), {
 		params ["_unit", "_allDamages", "_shooter", "_damageType"];
 		if(!isPlayer _unit || !GVAR(concussionEnabled)) exitWith {};
+		_bodyAreasStates = [_unit,GVAR(incapacitationType)] call EFUNC(main,getAreaStates);
+		_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
+		if(_bodyState == 2 || _legsState == 2) exitWith {};
 		{
 			_x params ["_damage","_bodyPart"];
 			if(_bodyPart == "Head") then {
 				if(_damage >= ACEVAR(medical,const_penetrationThreshold)) exitWith {
 					if(GVAR(playFallAnimation)) then {
-						[_unit, 5] call EFUNC(main,fallDown);
+						[_unit, GVAR(concussionTime)] call EFUNC(main,fallDown);
 					} else {
 						_unit call EFUNC(main,goProne);
 					};
-					[_unit,5] call EFUNC(main,blurAndDeaf);
+					[_unit,GVAR(concussionTime)*2.0] call EFUNC(main,blurAndDeaf);
 				};
 			};
 		} forEach _allDamages;

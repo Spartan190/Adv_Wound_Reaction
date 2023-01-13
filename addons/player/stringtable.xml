@@ -158,5 +158,13 @@ None: No reaction to damage in limbs\nDamage: Reaction is only based on the dama
             <English>If enabled a concussion effect will be applied when hit in the head. The player will fall to the ground, vision is blurred and hearing is lowered for a short amount of time.</English>
             <German>Wenn aktiviert wird beim Treffer in den Kopf ein Gehirnerschütterungseffekt angewendet. Der Spieler fällt zu Boden, die Sicht ist verschwommen und das Gehört ist verringert für eine kurze Zeit.</German>
         </Key>
+        <Key ID="STR_AWR_Player_ConcussionTime_DisplayName">
+            <English>Concussion Time</English>
+            <German>Gehirnerschütterung Zeit</German>
+        </Key>
+        <Key ID="STR_AWR_Player_ConcussionTime_Description">
+            <English>The time the unit will stay on in the concussion state. The blur and deafness is twice as long as this time.</English>
+            <German>Die Zeit wie lange die Person am Boden bleibt. Die Zeit der verschwommenen Sicht und der Taubheit ist doppelt so lange.</German>
+        </Key>
     </Package>
 </Project>

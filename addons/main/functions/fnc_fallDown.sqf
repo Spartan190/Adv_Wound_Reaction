@@ -18,7 +18,10 @@
 params ["_unit", ["_wakeUpTime", 1, [1]]];
 [_unit, _wakeUpTime] spawn {
 	params ["_unit", "_wakeUpTime"];
+	if(!(alive _unit)) exitWith {};
 	[_unit, true] call ACEFUNC(medical_engine,setUnconsciousAnim);
 	sleep _wakeUpTime;
-	[_unit, false] call ACEFUNC(medical_engine,setUnconsciousAnim);
+	if((alive _unit)) then {
+		[_unit, false] call ACEFUNC(medical_engine,setUnconsciousAnim);
+	};
 };
