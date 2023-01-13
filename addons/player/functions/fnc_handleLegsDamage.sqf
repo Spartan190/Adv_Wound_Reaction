@@ -40,10 +40,10 @@ if(_legsState == 1) then {
 };
 
 if(GVAR(goProne) && (_legsState == 2 || _bodyState == 2)) then {
-	if(_isIncapacitated && !_wasIncapacitated) then {
+	if(_isIncapacitated && _oldLegsState != 2) then {
 		_unit call EFUNC(main,fallDown);
 	} else {
-		if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
+		if((lifeState _unit) != "INCAPACITATED" && stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
 			SHOW_HINT(localize LSTRING(UNABLE_TO_STAND));
 			_noWeaponAnim = "amovppnemstpsnonwnondnon";
 			if("" == currentWeapon _unit) then {
