@@ -44,19 +44,23 @@ if(_legsState == 1) then {
 };
 
 if(GVAR(goProne) && (_legsState == 2 || _bodyState == 2)) then {
-	if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
-		_noWeaponAnim = "amovppnemstpsnonwnondnon";
-		if("" == currentWeapon _unit) then {
-			[
-				_unit,
-				_noWeaponAnim
-			] call ACEFUNC(common,doAnimation);
-		} else {
-			[_unit] call ACEFUNC(common,setProne);
-		};
-		_unit setUnitPos "DOWN";
+	if(_isIncapacitated && !_wasIncapacitated) then {
+		_unit call EFUNC(main,fallDown);
 	} else {
-		_isProne = true;
+		if(stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
+			_noWeaponAnim = "amovppnemstpsnonwnondnon";
+			if("" == currentWeapon _unit) then {
+				[
+					_unit,
+					_noWeaponAnim
+				] call ACEFUNC(common,doAnimation);
+			} else {
+				[_unit] call ACEFUNC(common,setProne);
+			};
+			_unit setUnitPos "DOWN";
+		} else {
+			_isProne = true;
+		};
 	};
 } else {
 	_isProne = false;
