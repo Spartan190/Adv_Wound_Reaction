@@ -2,6 +2,7 @@
 
 
 ["CBA_settingsInitialized", {
+	if (!isServer && {hasInterface}) exitWith {}; // 1: Don't Run on non-hc Clients
 	["ace_medical_handleUnitVitals", {
 		params ["_unit"];
 		if(!GVAR(isEnabled) || isPlayer _unit) exitWith {};

@@ -25,19 +25,8 @@ _unit setVariable [QGVAR(bodyAreasStates), _bodyAreasStates, true];
 _bodyAreasStates params ["_bodyState","_armsState","_legsState"];
 _oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
-if(_bodyState > 0 || _armsState > 0) then {
-	[_unit,_oldBodyAreasStates,_bodyAreasStates] call FUNC(handleWeaponUsage);
-};
 
-if((_oldBodyState > _bodyState) || (_oldArmsState > _armsState)) then {
-	if(_bodyState == 0 && _armsState == 1) then {
-		[_unit,true] call FUNC(pickupWeapons);
-	} else {
-		if(_bodyState == 0 && _armsState == 0) then {
-			[_unit,false] call FUNC(pickupWeapons);
-		};
-	};
-};
+[_unit,_oldBodyAreasStates,_bodyAreasStates] call FUNC(handleWeaponUsage);
 
 _isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
 

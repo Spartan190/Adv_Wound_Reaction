@@ -34,17 +34,32 @@ _cWeapon = currentWeapon _unit;
 if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 	_canUseHandgun = ((_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100)));
 	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
-	/*if((_bodyState == 2 && !_canUseHandgun) || _armsState == 2) then {
-		_unit disableAI "TARGET";
+	if(_bodyState == 2 || _armsState == 2) then {
+		LOG_1("Disabling AI %1", _unit);
 		_unit disableAI "AUTOTARGET";
-	};*/
-};
+		_unit disableAI "TARGET";
+		_unit disableAI "AUTOCOMBAT";
+		_unit setVariable [QGVAR(onDisableCombatMode), unitCombatMode _unit];
+		_unit setUnitCombatMode "GREEN";
+	} else {
+		LOG_1("Enabling AI %1", _unit);
+		_unit enableAI "AUTOTARGET";
+		_unit enableAI "TARGET";
+		_unit enableAI "AUTOCOMBAT";
+		_unit setUnitCombatMode (_unit getVariable [QGVAR(onDisableCombatMode), "YELLOW"]);
+		
+	};
 
-/*if(_bodyState < 2 && _armsState < 2) then {
-	LOG_1("Enabling AI %1", _unit);
-	_unit enableAI "TARGET";
-	_unit enableAI "AUTOTARGET";
-};*/
+	if((_oldBodyState > _bodyState) || (_oldArmsState > _armsState)) then {
+		if(_bodyState == 0 && _armsState == 1) then {
+			[_unit,true] call FUNC(pickupWeapons);
+		} else {
+			if(_bodyState == 0 && _armsState == 0) then {
+				[_unit,false] call FUNC(pickupWeapons);
+			};
+		};
+	};
+};
 
 if(_bodyState < 2 && _armsState == 0) exitWith {};
 
