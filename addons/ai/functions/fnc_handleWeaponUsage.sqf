@@ -35,8 +35,10 @@ if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
 	if((_bodyState == 2 && !_canUseHandgun) || _armsState == 2) then {
 		_unit disableAI "TARGET";
+		_unit disableAI "AUTOTARGET";
 	} else {
 		_unit enableAI "TARGET";
+		_unit enableAI "AUTOTARGET";
 	};
 };
 
