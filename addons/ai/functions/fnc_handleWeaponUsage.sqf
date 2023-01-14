@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
@@ -33,14 +34,17 @@ _cWeapon = currentWeapon _unit;
 if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 	_canUseHandgun = ((_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100)));
 	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
-	if((_bodyState == 2 && !_canUseHandgun) || _armsState == 2) then {
+	/*if((_bodyState == 2 && !_canUseHandgun) || _armsState == 2) then {
 		_unit disableAI "TARGET";
 		_unit disableAI "AUTOTARGET";
-	} else {
-		_unit enableAI "TARGET";
-		_unit enableAI "AUTOTARGET";
-	};
+	};*/
 };
+
+/*if(_bodyState < 2 && _armsState < 2) then {
+	LOG_1("Enabling AI %1", _unit);
+	_unit enableAI "TARGET";
+	_unit enableAI "AUTOTARGET";
+};*/
 
 if(_bodyState < 2 && _armsState == 0) exitWith {};
 
