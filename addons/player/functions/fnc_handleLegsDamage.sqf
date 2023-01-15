@@ -39,11 +39,14 @@ if(_legsState == 1) then {
 	};
 };
 
+_isFatal = _legsState == 2 || _bodyState == 2;
+_wasFatal = _oldLegsState == 2 || _oldBodyState == 2;
+_isFallingDown = _unit getVariable [QGVAR(fallingDown), false];
 if(GVAR(goProne) && (_legsState == 2 || _bodyState == 2)) then {
-	if(GVAR(playFallAnimation) && _isIncapacitated && !_wasIncapacitated) then {
+	if(GVAR(playFallAnimation) && _isFatal && !_wasFatal) then {
 		_unit call EFUNC(main,fallDown);
 	} else {
-		if((lifeState _unit) != "INCAPACITATED" && stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
+		if(!_isFallingDown && (lifeState _unit) != "INCAPACITATED" && stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
 			SHOW_HINT(localize LSTRING(UNABLE_TO_STAND));
 			_unit call EFUNC(main,goProne);
 		} else {
