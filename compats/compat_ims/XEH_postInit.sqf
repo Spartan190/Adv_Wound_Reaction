@@ -5,7 +5,7 @@
 	if (!hasInterface) exitWith {};
 	["ace_medical_handleUnitVitals", {
 		params ["_unit"];
-		if(!EGVAR(player,isEnabled) || !EGVAR(ai,isEnabled)) exitWith {};
+		if(!EGVAR(player,isEnabled) && !EGVAR(ai,isEnabled) || !(local _unit)) exitWith {};
 		
 		_bodyAreasStates = [_unit,([EGVAR(ai,incapacitationType),EGVAR(player,incapacitationType)] select (isPlayer _unit))] call EFUNC(main,getAreaStates);
 		private _oldBodyAreasStates = _unit getVariable [QGVAR(oldBodyAreasStates), [0,0,0]];
