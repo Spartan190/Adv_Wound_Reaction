@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
@@ -41,7 +40,7 @@ if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 			_unit disableAI "AUTOTARGET";
 			_unit disableAI "TARGET";
 			_unit disableAI "AUTOCOMBAT";
-			_unit setVariable [QGVAR(onDisableCombatMode), unitCombatMode _unit];
+			_unit setVariable [QGVAR(onDisableCombatMode), unitCombatMode _unit,true];
 			_unit setUnitCombatMode "GREEN";
 		} else {
 			LOG_1("Enabling AI %1", _unit);
@@ -49,7 +48,7 @@ if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 			_unit enableAI "TARGET";
 			_unit enableAI "AUTOCOMBAT";
 			_unit enableAI "WEAPONAIM";
-			_unit setUnitCombatMode (_unit getVariable [QGVAR(onDisableCombatMode), "YELLOW"]);
+			_unit setUnitCombatMode (_unit getVariable [QGVAR(onDisableCombatMode), "YELLOW", true]);
 			
 		};
 	};*/

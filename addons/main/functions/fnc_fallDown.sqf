@@ -16,12 +16,15 @@
 */
 
 params ["_unit", ["_wakeUpTime", 1, [1]]];
+if(!(_unit getVariable [QGVAR(fallingDown), false])) exitWith {};
+if(!(alive _unit) || {(lifeState _unit) == "INCAPACITATED"}) exitWith {};
 [_unit, _wakeUpTime] spawn {
 	params ["_unit", "_wakeUpTime"];
-	if(!(alive _unit)) exitWith {};
+	_unit setVariable [QGVAR(fallingDown), true, true];
 	[_unit, true] call ACEFUNC(medical_engine,setUnconsciousAnim);
 	sleep _wakeUpTime;
 	if((alive _unit)) then {
 		[_unit, false] call ACEFUNC(medical_engine,setUnconsciousAnim);
 	};
+	_unit setVariable [QGVAR(fallingDown), false, true];
 };
