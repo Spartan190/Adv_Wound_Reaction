@@ -18,9 +18,9 @@
 params ["_unit", "_bodyAreasStates"];
 if (!alive _unit || !GVAR(isEnabled)) exitWith {};
 private _inDeepWater = _unit call EFUNC(main,inDeepWater);
-private _oldBodyAreasStates = _unit getVariable [QGVAR(oldBodyAreasStates), [0,0,0]];
+private _oldBodyAreasStates = _unit getVariable [QEGVAR(main,oldBodyAreasStates), [0,0,0]];
 
-_unit setVariable [QGVAR(bodyAreasStates), _bodyAreasStates, true];
+_unit setVariable [QEGVAR(main,bodyAreasStates), _bodyAreasStates, true];
 
 _bodyAreasStates params ["_bodyState","_armsState","_legsState"];
 _oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
@@ -30,4 +30,4 @@ _oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
 _isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
 
-_unit setVariable [QGVAR(oldBodyAreasStates), _bodyAreasStates, true];
+_unit setVariable [QEGVAR(main,oldBodyAreasStates), _bodyAreasStates, true];

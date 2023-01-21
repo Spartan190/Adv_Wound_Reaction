@@ -8,7 +8,7 @@
 		if(!EGVAR(player,isEnabled) && !EGVAR(ai,isEnabled) || !(local _unit)) exitWith {};
 		
 		_bodyAreasStates = [_unit,([EGVAR(ai,incapacitationType),EGVAR(player,incapacitationType)] select (isPlayer _unit))] call EFUNC(main,getAreaStates);
-		private _oldBodyAreasStates = _unit getVariable [QGVAR(oldBodyAreasStates), [0,0,0]];
+		private _oldBodyAreasStates = _unit getVariable [QEGVAR(main,oldBodyAreasStates), [0,0,0]];
 		_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
 		_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
@@ -21,7 +21,7 @@
 				[_unit, true] call FUNC(setPlayerMeleeMode);
 			}
 		};
-		_unit setVariable [QGVAR(oldBodyAreasStates), _bodyAreasStates, true];
+		_unit setVariable [QEGVAR(main,oldBodyAreasStates), _bodyAreasStates, true];
 
 	}] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
