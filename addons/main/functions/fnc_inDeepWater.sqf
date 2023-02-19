@@ -24,5 +24,7 @@ if(_isInWater) then {
 	_waterDepth = selectBestPlaces [getPosASL _unit, 1, "waterDepth", 1, 1] select 0 select 1;
 };
 
+if(isNil "_waterDepth") exitWith {false};
+
 if (_waterDepth >= 0.5) exitWith {true};
 false
