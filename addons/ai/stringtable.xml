@@ -149,5 +149,21 @@
             <English>If enabled a concussion effect will be applied when hit in the head. The player will fall to the ground, vision is blurred and hearing is lowered for a short amount of time.</English>
             <German>Wenn aktiviert wird beim Treffer in den Kopf ein Gehirnerschütterungseffekt angewendet. Der Spieler fällt zu Boden, die Sicht ist verschwommen und das Gehört ist verringert für eine kurze Zeit.</German>
         </Key>
+        <Key ID="STR_AWR_AI_SurrenderChance_DisplayName">
+            <English>Surrender Chance</English>
+            <German>Aufgebe Chance</German>
+        </Key>
+        <Key ID="STR_AWR_AI_SurrenderChance_Description">
+            <English>The chance of surrender checked every 10 seconds after dropping the primary weapon.</English>
+            <German>Die Chance des Aufgebens wird alle 10 sekunden geprüft, nachdem die primäre Waffe fallen gelassen wurde.</German>
+        </Key>
+        <Key ID="STR_AWR_AI_SurrenderEnemies_DisplayName">
+            <English>Enemies Count</English>
+            <German>Gegner Anzahl</German>
+        </Key>
+        <Key ID="STR_AWR_AI_SurrenderEnemies_Description">
+            <English>Amount of enemies that have at least to be present that the unit will surrender.</English>
+            <German>Die Anzahl an Gegnern, die mindestens anwesend sein müssen, damit der Gegner sich ergibt.</German>
+        </Key>
     </Package>
 </Project>

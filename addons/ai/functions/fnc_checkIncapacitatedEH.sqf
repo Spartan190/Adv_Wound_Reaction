@@ -25,6 +25,7 @@ _unit setVariable [QEGVAR(main,bodyAreasStates), _bodyAreasStates, true];
 _bodyAreasStates params ["_bodyState","_armsState","_legsState"];
 _oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
+[_unit,_oldBodyAreasStates,_bodyAreasStates] call FUNC(handleSurrendering);
 
 [_unit,_oldBodyAreasStates,_bodyAreasStates] call FUNC(handleWeaponUsage);
 
