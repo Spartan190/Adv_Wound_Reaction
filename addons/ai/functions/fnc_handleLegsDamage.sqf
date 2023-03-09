@@ -44,7 +44,7 @@ if(_legsState == 1) then {
 
 _isFatal = _legsState == 2 || _bodyState == 2;
 _wasFatal = _oldLegsState == 2 || _oldBodyState == 2;
-_isFallingDown = _unit getVariable [QGVAR(fallingDown), false];
+_isFallingDown = _unit getVariable [QEGVAR(main,fallingDown), false];
 if(GVAR(goProne) && (_legsState == 2 || _bodyState == 2)) then {
 	if(GVAR(playFallAnimation) && _isFatal && !_wasFatal) then {
 		TRACE_1("Playing falling animation", _unit);

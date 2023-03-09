@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
@@ -31,16 +32,64 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 		_bodyStates params ["_bodyState","_armsState","_legsState"];
 		_isIncapacitated = _bodyState == 2 || _armsState >= 1;
 		_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
-		while { _isIncapacitated && !(captive _unit) } do {
+		while { _isIncapacitated } do {
 			_bodyStates = _unit getVariable [QEGVAR(main,bodyAreasStates), [0,0,0]];
 			_bodyStates params ["_bodyState","_armsState","_legsState"];
 			_isIncapacitated = _bodyState == 2 || _armsState >= 1;
 			_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
-			if(_enemyUnits >= GVAR(minSurrenderEnemies) && (GVAR(surrenderChance) > random 100)) then {
+			_surrenderChance = 85 min (GVAR(surrenderChance) + (_enemyUnits * GVAR(surrenderChancePerEnemy)));
+			_surrenderChance = GVAR(surrenderChance) max _surrenderChance;
+			if(_enemyUnits > 0 && _surrenderChance > random 100) then {
 				_isSurrendering = _unit getVariable [QACEVAR(captives,isSurrendering), false];
 				if (!_isSurrendering) then {
-					[_unit, true] call ACEFUNC(captives,setSurrendered);
-					break;
+					TRACE_1("Surrendering",_isSurrendering);
+					//_unit setUnitPos "AUTO";
+					//_unit enableai "PATH";
+					//_unit setCombatMode "BLUE";
+					_unit leaveVehicle vehicle _unit;
+					doGetOut _unit;
+					_speed = 1.5;
+					//_unit setUnitPos "UP";
+					//_unit setBehaviour "SAFE";
+					//_unit setSpeedMode "Limited";
+					["ACE_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
+					_noEnemyTimer = 0.0;
+					waitUntil {
+						sleep 1;
+						["Starting Check..."] remoteExec ["hint"];
+						sleep 1;
+						[""] remoteExec ["hintSilent"];
+						[format ["Surrendered %1",_unit getVariable [QGVAR(isSurrendered), false]]] remoteExec ["hint"];
+						sleep 1;
+						[""] remoteExec ["hintSilent"];
+						if(!(_unit getVariable [QGVAR(isSurrendered), false])) exitWith {true};
+						[format ["Handcuffed %1",_unit getVariable ["ace_captives_isHandcuffed", false]]] remoteExec ["hint"];
+						sleep 1;
+						[""] remoteExec ["hintSilent"];
+						if(_unit getVariable ["ace_captives_isHandcuffed", false]) exitWith {false};
+						_enemyClose = _unit distance (_unit findNearestEnemy _unit) < 50;
+						[format ["Enemey Close %1 %2",_enemyClose,_unit distance (_unit findNearestEnemy _unit)]] remoteExec ["hint"];
+						sleep 1;
+						[""] remoteExec ["hintSilent"];
+						if(_enemyClose) then {
+							_noEnemyTimer = 0.0;
+						} else {
+							_noEnemyTimer = _noEnemyTimer + 1.0;
+							[format ["Timer %1 %2",_enemyClose,_noEnemyTimer]] remoteExec ["hint"];
+							sleep 1;
+							[""] remoteExec ["hintSilent"];
+						};
+						if(_enemyClose) exitWith {false};
+						if(_noEnemyTimer >= 5.0) exitWith {true};
+						false;
+					};
+					[""] remoteExec ["hintSilent"];
+					if((_unit getVariable [QGVAR(isSurrendered), false])) then {
+						["ace_captives_setSurrendered",[_unit,false]] call CBA_fnc_globalEvent;
+					};
+					//_unit setUnitPos "AUTO";
+					//_unit setBehaviour "AWARE";
+					//_unit setSpeedMode "NORMAL";
 				};
 			};
 			sleep 10;

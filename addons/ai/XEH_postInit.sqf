@@ -20,13 +20,13 @@
 			_unit setVariable [QGVAR(handgunWeaponHolder), [], true];
 		};
 		
-		/*if(_reason == "SetHandcuffed") then {
+		if(_reason == "SetHandcuffed") then {
 			_unit setVariable [QGVAR(isHandcuffed), _state, true];
 		};
 
 		if(_reason == "SetSurrendered") then {
 			_unit setVariable [QGVAR(isSurrendered), _state, true];
-		};*/
+		};
 	}] call CBA_fnc_addEventHandler;
 
 }] call CBA_fnc_addEventHandler;

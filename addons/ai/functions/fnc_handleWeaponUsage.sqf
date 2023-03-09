@@ -66,6 +66,14 @@ if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 
 if(_bodyState < 2 && _armsState == 0) exitWith {};
 
+/*if(_isIncapacitated && !_wasIncapacitated) then {
+	_unit removeWeapon "Throw";
+};
+
+if(_wasIncapacitated && !_isIncapacitated) then {
+	_unit addWeapon "Throw";
+};*/
+
 if(_cWeapon == "") exitWith {};
 if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
 	switch (GVAR(weaponHandleMode)) do {
