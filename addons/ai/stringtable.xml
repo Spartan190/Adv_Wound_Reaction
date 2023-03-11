@@ -157,13 +157,13 @@
             <English>The chance of surrender checked every 10 seconds after dropping the primary weapon.</English>
             <German>Die Chance des Aufgebens wird alle 10 sekunden geprüft, nachdem die primäre Waffe fallen gelassen wurde.</German>
         </Key>
-        <Key ID="STR_AWR_AI_SurrenderEnemies_DisplayName">
-            <English>Enemies Count</English>
-            <German>Gegner Anzahl</German>
+        <Key ID="STR_AWR_AI_SurrenderChancePerEnemy_DisplayName">
+            <English>Added Chance per Enemy</English>
+            <German>Weitere Chance pro Gegner</German>
         </Key>
-        <Key ID="STR_AWR_AI_SurrenderEnemies_Description">
-            <English>Amount of enemies that have at least to be present that the unit will surrender.</English>
-            <German>Die Anzahl an Gegnern, die mindestens anwesend sein müssen, damit der Gegner sich ergibt.</German>
+        <Key ID="STR_AWR_AI_SurrenderChancePerEnemy_Description">
+            <English>The chance percentage that is added per enemy to the surrender chance. The overall chance from enemy is capped at 85%.</English>
+            <German>Die prozentuale Chance die pro Gegner auf die Aufgebe Chance addiert wird. Die gesamte Chance durch die Gegner ist auf 85% begrenzt.</German>
         </Key>
     </Package>
 </Project>

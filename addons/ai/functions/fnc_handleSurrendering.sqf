@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
@@ -56,6 +55,7 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 					_noEnemyTimer = 0.0;
 					waitUntil {
 						sleep 1;
+#ifdef DEBUG_MODE_FULL
 						["Starting Check..."] remoteExec ["hint"];
 						sleep 1;
 						[""] remoteExec ["hintSilent"];
@@ -66,24 +66,31 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 						[format ["Handcuffed %1",_unit getVariable ["ace_captives_isHandcuffed", false]]] remoteExec ["hint"];
 						sleep 1;
 						[""] remoteExec ["hintSilent"];
+#endif
 						if(_unit getVariable ["ace_captives_isHandcuffed", false]) exitWith {false};
 						_enemyClose = _unit distance (_unit findNearestEnemy _unit) < 50;
+#ifdef DEBUG_MODE_FULL
 						[format ["Enemey Close %1 %2",_enemyClose,_unit distance (_unit findNearestEnemy _unit)]] remoteExec ["hint"];
 						sleep 1;
 						[""] remoteExec ["hintSilent"];
+#endif
 						if(_enemyClose) then {
 							_noEnemyTimer = 0.0;
 						} else {
 							_noEnemyTimer = _noEnemyTimer + 1.0;
+#ifdef DEBUG_MODE_FULL							
 							[format ["Timer %1 %2",_enemyClose,_noEnemyTimer]] remoteExec ["hint"];
 							sleep 1;
 							[""] remoteExec ["hintSilent"];
+#endif
 						};
 						if(_enemyClose) exitWith {false};
 						if(_noEnemyTimer >= 5.0) exitWith {true};
 						false;
 					};
+#ifdef DEBUG_MODE_FULL
 					[""] remoteExec ["hintSilent"];
+#endif
 					if((_unit getVariable [QGVAR(isSurrendered), false])) then {
 						["ace_captives_setSurrendered",[_unit,false]] call CBA_fnc_globalEvent;
 					};
