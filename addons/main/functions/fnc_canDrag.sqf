@@ -26,7 +26,7 @@ if(_canAceCarry || _canAceDrag) exitWith {false};
 
 if !([_unit, _target, ["isNotSwimming"]] call ACEFUNC(common,canInteractWith)) exitWith {false};
 
-_bodyAreasSates = _target getVariable [QGVAR(bodyAreasStates), [0,0,0]];
+_bodyAreasSates = _target getVariable [QGVAR(bodyAreaStates), [0,0,0]];
 _bodyAreasSates params ["_bodyState","_armsSate","_legsState"];
 
 alive _target && {vehicle _target isEqualto _target} && {_bodyState == 2 || _legsState == 2};

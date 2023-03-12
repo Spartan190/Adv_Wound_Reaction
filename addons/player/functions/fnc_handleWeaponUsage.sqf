@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
@@ -14,19 +15,22 @@
 *
 * Public: No
 */
-params ["_unit","_oldBodyAreasStates","_newBodyAreasStates","_inDeepWater"];
+params ["_unit","_oldbodyAreaStates","_bodyAreaStates","_inDeepWater"];
 
 if (GVAR(weaponHandleMode) == 0)  exitWith {};
 
 
-_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
-_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
+_oldbodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 _isIncapacitated = _bodyState == 2 || _armsState == 2;
 _wasIncapacitated =_oldBodyState == 2 || _oldArmsState == 2;
 
-if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
+_statesChanged = (_bodyState != _oldBodyState) || (_armsState != _oldArmsState);
+TRACE_1("Checking if update of handgun is needed",_statesChanged);
+if(_statesChanged) then {
 	_canUseHandgun = (_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100));
 	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
+	TRACE_1("Updating "+QGVAR(canUseHandgun),_canUseHandgun);
 };
 
 if(_bodyState < 2 && _armsState == 0) exitWith {};
@@ -61,7 +65,8 @@ if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
 		};
 	} else {
 		_ignoreIndex = EGVAR(main,ignoreChanceClasses) findIf {_handgun == _x || _handgun isKindOf _x};
-		if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable QGVAR(canUseHandgun)))) then {
+		TRACE_1("Checking "+QGVAR(canUseHandgun),_unit getVariable [QGVAR(canUseHandgun),false]);
+		if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable [QGVAR(canUseHandgun),false]))) then {
 			switch (GVAR(weaponHandleMode)) do {
 				case 1: {
 					if(_inDeepWater || _isInVehicle) then {

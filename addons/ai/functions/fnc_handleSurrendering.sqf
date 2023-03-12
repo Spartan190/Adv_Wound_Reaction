@@ -16,11 +16,11 @@
 *
 * Public: No
 */
-params ["_unit","_oldBodyStates","_bodyStates"];
+params ["_unit","_oldBodyAreaStates","_bodyStates"];
 if(!GVAR(enableSurrender)) exitWith {};
 
-_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
-_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
+_oldBodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
 _isIncapacitated = _bodyState == 2 || _armsState >= 1;
 _wasIncapacitated =_oldBodyState == 2 || _oldArmsState >= 1;
@@ -28,7 +28,7 @@ _wasIncapacitated =_oldBodyState == 2 || _oldArmsState >= 1;
 if(_isIncapacitated && !_wasIncapacitated) then {
 	[_unit] spawn {
 		params["_unit"];
-		_bodyStates = _unit getVariable [QEGVAR(main,bodyAreasStates), [0,0,0]];
+		_bodyStates = _unit getVariable [QEGVAR(main,bodyAreaStates), [0,0,0]];
 		_bodyStates params ["_bodyState","_armsState","_legsState"];
 		_isIncapacitated = _bodyState == 2 || _armsState >= 1;
 		_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
@@ -100,7 +100,7 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 				};
 			};
 			sleep 10;
-			_bodyStates = _unit getVariable [QEGVAR(main,bodyAreasStates), [0,0,0]];
+			_bodyStates = _unit getVariable [QEGVAR(main,bodyAreaStates), [0,0,0]];
 			_bodyStates params ["_bodyState","_armsState","_legsState"];
 			_isIncapacitated = _bodyState == 2 || _armsState >= 1;
 		};

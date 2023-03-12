@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
@@ -15,19 +16,14 @@
 *
 * Public: No
 */
-params ["_unit", "_bodyAreasStates"];
+params ["_unit","_oldbodyAreaStates","_bodyAreaStates"];
 if (!alive _unit || !GVAR(isEnabled)) exitWith {};
 private _inDeepWater = _unit call EFUNC(main,inDeepWater);
-private _oldBodyAreasStates = _unit getVariable [QEGVAR(main,oldBodyAreasStates), [0,0,0]];
 
-_unit setVariable [QEGVAR(main,bodyAreasStates), _bodyAreasStates, true];
-
-_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
-_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
-
-[_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleWeaponUsage);
+_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
+_oldbodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+TRACE_2("Updating",_bodyAreaStates,_oldbodyAreaStates);
+[_unit,_oldbodyAreaStates,_bodyAreaStates,_inDeepWater] call FUNC(handleWeaponUsage);
 
 
-_isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
-
-_unit setVariable [QEGVAR(main,oldBodyAreasStates), _bodyAreasStates, true];
+_isCarryable = [_unit,_oldbodyAreaStates,_bodyAreaStates,_inDeepWater] call FUNC(handleLegsDamage);

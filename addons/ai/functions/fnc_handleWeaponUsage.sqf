@@ -16,13 +16,13 @@
 *
 * Public: No
 */
-params ["_unit","_oldBodyAreasStates","_newBodyAreasStates"];
+params ["_unit","_oldBodyAreaStates","_bodyAreaStates"];
 
 if (GVAR(weaponHandleMode) == 0)  exitWith {};
 
 
-_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
-_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
+_oldBodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 _isIncapacitated = _bodyState == 2 || _armsState == 2;
 _wasIncapacitated =_oldBodyState == 2 || _oldArmsState == 2;
 
@@ -38,7 +38,7 @@ if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 		[_unit] spawn {
 			params["_unit"];
 			waitUntil {!(_unit getVariable [QGVAR(isSurrendered),false] && !(_unit getVariable [QGVAR(isHandcuffed),false]))};
-			_areaStates = _unit getVariable [QEGVAR(main,bodyAreasStates), [0,0,0]];
+			_areaStates = _unit getVariable [QEGVAR(main,bodyAreaStates), [0,0,0]];
 			_areaStates params ["_bodyState","_armsState","_legsState"];
 			if(_bodyState == 0 && _armsState == 1) then {
 				[_unit,true] call FUNC(pickupWeapons);
@@ -63,7 +63,7 @@ if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
 	};
 } else {
 	_ignoreIndex = EGVAR(main,ignoreChanceClasses) findIf {_handgun == _x || _handgun isKindOf _x};
-	if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable [QGVAR(canUseHandgun), true]))) then {
+	if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable [QGVAR(canUseHandgun), false]))) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
 				_hHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);

@@ -4,19 +4,18 @@
 ["CBA_settingsInitialized", {
 	if (!hasInterface) exitWith {};
 	TRACE_1("Adding Player EH","");
-	["ace_medical_handleUnitVitals", {
-		params ["_unit"];
+	["awr_handleStatesUpdate", {
+		params ["_unit","_oldBodyAreaStates","_bodyAreaStates"];
 		if(!GVAR(isEnabled) || !isPlayer _unit || !local _unit) exitWith {};
 		TRACE_2("Updating Player",player,_unit);
-		_bodyAreasStates = [_unit,GVAR(incapacitationType)] call EFUNC(main,getAreaStates);
-		[_unit, _bodyAreasStates] spawn FUNC(checkIncapacitatedEH);
+		[_unit,_oldBodyAreaStates,_bodyAreaStates] spawn FUNC(checkIncapacitatedEH);
 	}] call CBA_fnc_addEventHandler;
 
 	[QACEVAR(medical,woundReceived), {
 		params ["_unit", "_allDamages", "_shooter", "_damageType"];
 		if(!isPlayer _unit || !local _unit || !GVAR(concussionEnabled)) exitWith {};
 		TRACE_2("Wound Received Player",player,_unit);
-		_bodyAreasStates = [_unit,GVAR(incapacitationType)] call EFUNC(main,getAreaStates);
+		_bodyAreaStates = [_unit,GVAR(incapacitationType)] call EFUNC(main,getAreaStates);
 		_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
 		if(_bodyState == 2 || _legsState == 2) exitWith {};
 		{

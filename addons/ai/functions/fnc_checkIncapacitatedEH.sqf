@@ -15,20 +15,16 @@
 *
 * Public: No
 */
-params ["_unit", "_bodyAreasStates"];
+params ["_unit","_oldBodyAreaStates","_bodyAreaStates"];
 if (!alive _unit || !GVAR(isEnabled)) exitWith {};
 private _inDeepWater = _unit call EFUNC(main,inDeepWater);
-private _oldBodyAreasStates = _unit getVariable [QEGVAR(main,oldBodyAreasStates), [0,0,0]];
 
-_unit setVariable [QEGVAR(main,bodyAreasStates), _bodyAreasStates, true];
+_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
+_oldBodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
-_bodyAreasStates params ["_bodyState","_armsState","_legsState"];
-_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+[_unit,_oldBodyAreaStates,_bodyAreaStates] call FUNC(handleSurrendering);
 
-[_unit,_oldBodyAreasStates,_bodyAreasStates] call FUNC(handleSurrendering);
+[_unit,_oldBodyAreaStates,_bodyAreaStates] call FUNC(handleWeaponUsage);
 
-[_unit,_oldBodyAreasStates,_bodyAreasStates] call FUNC(handleWeaponUsage);
+_isCarryable = [_unit,_oldBodyAreaStates,_bodyAreaStates,_inDeepWater] call FUNC(handleLegsDamage);
 
-_isCarryable = [_unit,_oldBodyAreasStates,_bodyAreasStates,_inDeepWater] call FUNC(handleLegsDamage);
-
-_unit setVariable [QEGVAR(main,oldBodyAreasStates), _bodyAreasStates, true];

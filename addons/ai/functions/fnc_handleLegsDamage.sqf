@@ -15,9 +15,9 @@
 *
 * Public: No
 */
-params ["_unit","_oldBodyAreasStates","_newBodyAreasStates","_inDeepWater"];
-_oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
-_newBodyAreasStates params ["_bodyState","_armsState","_legsState"];
+params ["_unit","_oldBodyAreaStates","_bodyAreaStates","_inDeepWater"];
+_oldBodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
+_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
 _isIncapacitated = _bodyState == 2 || _legsState > 0;
 _wasIncapacitated =_oldBodyState == 2 || _oldLegsState > 0;
 
