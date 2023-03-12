@@ -17,6 +17,7 @@
 * Public: No
 */
 params ["_unit","_oldBodyStates","_bodyStates"];
+if(!GVAR(enableSurrender)) exitWith {};
 
 _bodyAreasStates params ["_bodyState","_armsState","_legsState"];
 _oldBodyAreasStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
@@ -32,9 +33,6 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 		_isIncapacitated = _bodyState == 2 || _armsState >= 1;
 		_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
 		while { _isIncapacitated } do {
-			_bodyStates = _unit getVariable [QEGVAR(main,bodyAreasStates), [0,0,0]];
-			_bodyStates params ["_bodyState","_armsState","_legsState"];
-			_isIncapacitated = _bodyState == 2 || _armsState >= 1;
 			_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
 			_surrenderChance = 85 min (GVAR(surrenderChance) + (_enemyUnits * GVAR(surrenderChancePerEnemy)));
 			_surrenderChance = GVAR(surrenderChance) max _surrenderChance;
@@ -54,6 +52,7 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 					["ACE_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
 					_noEnemyTimer = 0.0;
 					waitUntil {
+						if(!GVAR(enableSurrender)) exitWith {true};
 						sleep 1;
 #ifdef DEBUG_MODE_FULL
 						["Starting Check..."] remoteExec ["hint"];
@@ -94,12 +93,16 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 					if((_unit getVariable [QGVAR(isSurrendered), false])) then {
 						["ace_captives_setSurrendered",[_unit,false]] call CBA_fnc_globalEvent;
 					};
+					
 					//_unit setUnitPos "AUTO";
 					//_unit setBehaviour "AWARE";
 					//_unit setSpeedMode "NORMAL";
 				};
 			};
 			sleep 10;
+			_bodyStates = _unit getVariable [QEGVAR(main,bodyAreasStates), [0,0,0]];
+			_bodyStates params ["_bodyState","_armsState","_legsState"];
+			_isIncapacitated = _bodyState == 2 || _armsState >= 1;
 		};
 	};
 };

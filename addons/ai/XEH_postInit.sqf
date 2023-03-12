@@ -15,7 +15,7 @@
 	["ace_captiveStatusChanged", {
 		params ["_unit", "_state", "_reason", "_caller"];
 		
-		if(_state) then {
+		if(_state && _reason == "SetHandcuffed") then {
 			_unit setVariable [QGVAR(primaryWeaponHolder), [], true];
 			_unit setVariable [QGVAR(handgunWeaponHolder), [], true];
 		};

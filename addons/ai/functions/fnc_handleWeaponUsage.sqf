@@ -34,45 +34,24 @@ if((_bodyState != _oldBodyState) || (_armsState != _oldArmsState)) then {
 	_canUseHandgun = ((_armsState < 2 && _bodyState < 2) || (_bodyState == 2 && _armsState < 2 && (GVAR(handgunChance) > random 100)));
 	_unit setVariable [QGVAR(canUseHandgun), _canUseHandgun ,true];
 	
-	/*if(GVAR(setAIBehaviour)) then {
-		if(_bodyState == 2 || _armsState == 2) then {
-			LOG_1("Disabling AI %1", _unit);
-			_unit disableAI "AUTOTARGET";
-			_unit disableAI "TARGET";
-			_unit disableAI "AUTOCOMBAT";
-			_unit setVariable [QGVAR(onDisableCombatMode), unitCombatMode _unit,true];
-			_unit setUnitCombatMode "GREEN";
-		} else {
-			LOG_1("Enabling AI %1", _unit);
-			_unit enableAI "AUTOTARGET";
-			_unit enableAI "TARGET";
-			_unit enableAI "AUTOCOMBAT";
-			_unit enableAI "WEAPONAIM";
-			_unit setUnitCombatMode (_unit getVariable [QGVAR(onDisableCombatMode), "YELLOW", true]);
-			
-		};
-	};*/
-
 	if((_oldBodyState > _bodyState) || (_oldArmsState > _armsState)) then {
-		if(_bodyState == 0 && _armsState == 1) then {
-			[_unit,true] call FUNC(pickupWeapons);
-		} else {
-			if(_bodyState == 0 && _armsState == 0) then {
-				[_unit,false] call FUNC(pickupWeapons);
+		[_unit] spawn {
+			params["_unit"];
+			waitUntil {!(_unit getVariable [QGVAR(isSurrendered),false] && !(_unit getVariable [QGVAR(isHandcuffed),false]))};
+			_areaStates = _unit getVariable [QEGVAR(main,bodyAreasStates), [0,0,0]];
+			_areaStates params ["_bodyState","_armsState","_legsState"];
+			if(_bodyState == 0 && _armsState == 1) then {
+				[_unit,true] call FUNC(pickupWeapons);
+			} else {
+				if(_bodyState == 0 && _armsState == 0) then {
+					[_unit,false] call FUNC(pickupWeapons);
+				};
 			};
 		};
 	};
 };
 
 if(_bodyState < 2 && _armsState == 0) exitWith {};
-
-/*if(_isIncapacitated && !_wasIncapacitated) then {
-	_unit removeWeapon "Throw";
-};
-
-if(_wasIncapacitated && !_isIncapacitated) then {
-	_unit addWeapon "Throw";
-};*/
 
 if(_cWeapon == "") exitWith {};
 if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {

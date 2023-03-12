@@ -165,5 +165,13 @@
             <English>The chance percentage that is added per enemy to the surrender chance. The overall chance from enemy is capped at 85%.</English>
             <German>Die prozentuale Chance die pro Gegner auf die Aufgebe Chance addiert wird. Die gesamte Chance durch die Gegner ist auf 85% begrenzt.</German>
         </Key>
+        <Key ID="STR_AWR_AI_SurrenderEnable_DisplayName">
+            <English>Surrender?</English>
+            <German>Aufgeben?</German>
+        </Key>
+        <Key ID="STR_AWR_AI_SurrenderEnable_Description">
+            <English>Determines if the surrendering should be enabled.</English>
+            <German>Legt fest, ob das Aufgeben aktiviert sein soll.</German>
+        </Key>
     </Package>
 </Project>
