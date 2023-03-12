@@ -24,7 +24,7 @@ _oldBodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
 
 _isIncapacitated = _bodyState == 2 || _armsState >= 1;
 _wasIncapacitated =_oldBodyState == 2 || _oldArmsState >= 1;
-
+TRACE_2("Surrender Update Check",_isIncapacitated,_wasIncapacitated);
 if(_isIncapacitated && !_wasIncapacitated) then {
 	[_unit] spawn {
 		params["_unit"];
@@ -34,7 +34,13 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 		_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
 		while { _isIncapacitated } do {
 			_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
-			_surrenderChance = 85 min (GVAR(surrenderChance) + (_enemyUnits * GVAR(surrenderChancePerEnemy)));
+			_friendlyCount = ({side _x == side _unit} count nearestObjects [getPos _unit,["Man","Car","Tank"],SURRENDER_UNIT_DISTANCE]);
+			_surrenderChance = 0 max (85 min ((GVAR(surrenderChance) + (_enemyUnits * GVAR(surrenderChancePerEnemy))) - _friendlyCount * GVAR(surrenderChancePerEnemy)));
+#ifdef DEBUG_MODE_FULL
+			[format ["Friendlies: %1, SurrenderChance: %2", _friendlyCount, _surrenderChance]] remoteExec ["hint"];
+			sleep 1;
+			[""] remoteExec ["hintSilent"];
+#endif
 			_surrenderChance = GVAR(surrenderChance) max _surrenderChance;
 			if(_enemyUnits > 0 && _surrenderChance > random 100) then {
 				_isSurrendering = _unit getVariable [QACEVAR(captives,isSurrendering), false];
@@ -67,7 +73,7 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 						[""] remoteExec ["hintSilent"];
 #endif
 						if(_unit getVariable ["ace_captives_isHandcuffed", false]) exitWith {false};
-						_enemyClose = _unit distance (_unit findNearestEnemy _unit) < 50;
+						_enemyClose = _unit distance (_unit findNearestEnemy _unit) <= SURRENDER_UNIT_DISTANCE;
 #ifdef DEBUG_MODE_FULL
 						[format ["Enemey Close %1 %2",_enemyClose,_unit distance (_unit findNearestEnemy _unit)]] remoteExec ["hint"];
 						sleep 1;
