@@ -1,5 +1,5 @@
-name = "AWR - Advanced Wound Reaction v5.6.6";
-description = "Advanced Wound Reaction v5.6.6";
+name = "AWR - Advanced Wound Reaction v5.6.7";
+description = "Advanced Wound Reaction v5.6.7";
 tooltip = "Advanced Wound Reaction";
 overview = "Extension for ACE3's medical system. Adds more reactions when dealing with injuries.";
 author = "[79AD] S. Spartan";

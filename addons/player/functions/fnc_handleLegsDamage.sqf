@@ -46,7 +46,8 @@ if(GVAR(goProne) && (_legsState == 2 || _bodyState == 2)) then {
 	if(GVAR(playFallAnimation) && _isFatal && !_wasFatal) then {
 		_unit call EFUNC(main,fallDown);
 	} else {
-		if(!_isFallingDown && (lifeState _unit) != "INCAPACITATED" && stance _unit != "PRONE" && stance _unit != "UNDEFINED") then {
+		_isMedicAnimation = ["_medic", animationState _unit] call BIS_fnc_inString;
+		if(!_isFallingDown && (lifeState _unit) != "INCAPACITATED" && stance _unit != "PRONE" && stance _unit != "UNDEFINED" && !_isMedicAnimation) then {
 			SHOW_HINT(localize LSTRING(UNABLE_TO_STAND));
 			_unit call EFUNC(main,goProne);
 		} else {
