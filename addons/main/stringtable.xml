@@ -57,5 +57,13 @@
             <English>Enable to display hints to the player e.g. if a weapon can't be used because he is too hurt.</English>
             <German>Aktivieren, um dem Spieler Hinweise anzuzeigen z.B. wenn eine Waffe nicht benutzt werden kann, da dieser zu stark verletzt ist.</German>
         </Key>
+        <Key ID="STR_AWR_Main_BandagingMultiplier_DisplayName">
+            <English>Bandaging multiplier</English>
+            <German>Bandagierungsfaktor</German>
+        </Key>
+        <Key ID="STR_AWR_Main_BandagingMultiplier_Description">
+            <English>Multiplier to be applied to the bandaging when AWR is triggered.</English>
+            <German>Faktor der auf das Bandagieren angewendet wird, wenn AWR ausgelöst wird.</German>
+        </Key>
     </Package>
 </Project>

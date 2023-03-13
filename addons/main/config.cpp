@@ -14,5 +14,13 @@ class CfgPatches {
     };
 };
 
+class ACEVAR(medical_treatment,actions)
+{
+	class BasicBandage
+	{
+		treatmentTime = QFUNC(getBandageTime);
+	};
+};
+
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"

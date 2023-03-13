@@ -7,3 +7,4 @@ PREP(inDeepWater);
 PREP(fallDown);
 PREP(goProne);
 PREP(blurAndDeaf);
+PREP(getBandageTime);

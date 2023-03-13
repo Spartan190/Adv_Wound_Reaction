@@ -4,7 +4,7 @@
 	["ace_medical_handleUnitVitals", {
 		params ["_unit"];
 		if(!EGVAR(player,isEnabled) && !EGVAR(ai,isEnabled) || !(local _unit)) exitWith {};
-		_bodyAreaStates = [_unit,([EGVAR(ai,incapacitationType),EGVAR(player,incapacitationType)] select (isPlayer _unit))] call EFUNC(main,getAreaStates);
+		_bodyAreaStates = [_unit,([EGVAR(ai,incapacitationType),EGVAR(player,incapacitationType)] select (isPlayer _unit))] call FUNC(getAreaStates);
 		_oldBodyAreaStates = _unit getVariable [QGVAR(oldbodyAreaStates),[0,0,0]];
 		_unit setVariable [QGVAR(bodyAreaStates), _bodyAreaStates, true];
 		["awr_handleStatesUpdate", [_unit,_oldBodyAreaStates,_bodyAreaStates]] call CBA_fnc_localEvent;
