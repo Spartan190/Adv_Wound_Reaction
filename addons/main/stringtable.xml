@@ -65,5 +65,9 @@
             <English>Multiplier to be applied to the bandaging when AWR is triggered.</English>
             <German>Faktor der auf das Bandagieren angewendet wird, wenn AWR ausgelöst wird.</German>
         </Key>
+        <Key ID="STR_AWR_Main_SLOW_BANDAGING">
+            <English>Bandaging time is increased due to your injuries.</English>
+            <German>Bandagierzeit ist wegen deiner Verletzungen erhöht.</German>
+        </Key>
     </Package>
 </Project>

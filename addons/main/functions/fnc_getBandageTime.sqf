@@ -21,5 +21,8 @@ params ["_medic", "_patient", "_bodypart", "_bandage"];
 _bandageTime = [_medic, _patient, _bodypart, _bandage] call ACEFUNC(medical_treatment,getBandageTime);
 _medicBodyAreaStates = _medic getVariable [QGVAR(bodyAreaStates), [0,0,0]];
 _medicBodyAreaStates params ["_bodyState","_armsState","_legsState"];
-if(_bodyState > 0 || _armsState > 0 || _legsState > 0) exitWith {GVAR(bandagingMultiplier) * _bandageTime};
+if(_bodyState > 0 || _armsState > 0 || _legsState > 0) exitWith {
+	SHOW_HINT(localize LSTRING(SLOW_BANDAGING));
+	GVAR(bandagingMultiplier) * _bandageTime
+};
 _bandageTime;
