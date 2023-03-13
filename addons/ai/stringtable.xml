@@ -151,27 +151,35 @@
         </Key>
         <Key ID="STR_AWR_AI_SurrenderChance_DisplayName">
             <English>Surrender Chance</English>
-            <German>Aufgebe Chance</German>
+            <German>Ergebe Chance</German>
         </Key>
         <Key ID="STR_AWR_AI_SurrenderChance_Description">
             <English>The chance of surrender checked every 10 seconds after dropping the primary weapon.</English>
-            <German>Die Chance des Aufgebens wird alle 10 sekunden geprüft, nachdem die primäre Waffe fallen gelassen wurde.</German>
+            <German>Die Chance des Ergebens wird alle 10 sekunden geprüft, nachdem die primäre Waffe fallen gelassen wurde.</German>
         </Key>
         <Key ID="STR_AWR_AI_SurrenderChancePerEnemy_DisplayName">
             <English>Added Chance per Enemy</English>
             <German>Weitere Chance pro Gegner</German>
         </Key>
         <Key ID="STR_AWR_AI_SurrenderChancePerEnemy_Description">
-            <English>The chance percentage that is added per enemy to the surrender chance. The overall chance from enemy is capped at 85%.</English>
-            <German>Die prozentuale Chance die pro Gegner auf die Aufgebe Chance addiert wird. Die gesamte Chance durch die Gegner ist auf 85% begrenzt.</German>
+            <English>The chance percentage that is added per enemy to the surrender chance. This amount is also subtracted for each friendly nearby. The overall chance from enemy is capped at 85%.</English>
+            <German>Die prozentuale Chance die pro Gegner auf die Ergeben Chance addiert wird. Dieser Anteil wird auch abgzogen für jeden Freund in der Nähe. Die gesamte Chance durch die Gegner ist auf 85% begrenzt.</German>
         </Key>
         <Key ID="STR_AWR_AI_SurrenderEnable_DisplayName">
             <English>Surrender?</English>
-            <German>Aufgeben?</German>
+            <German>Ergeben?</German>
         </Key>
         <Key ID="STR_AWR_AI_SurrenderEnable_Description">
             <English>Determines if the surrendering should be enabled.</English>
-            <German>Legt fest, ob das Aufgeben aktiviert sein soll.</German>
+            <German>Legt fest, ob das Ergeben aktiviert sein soll.</German>
+        </Key>
+        <Key ID="STR_AWR_AI_SurrenderDistance_DisplayName">
+            <English>Surrender distance</English>
+            <German>Ergebe Distanz</German>
+        </Key>
+        <Key ID="STR_AWR_AI_SurrenderDistance_Description">
+            <English>The distance to check for enemies and friends.</English>
+            <German>Die Distanz für Gegner und Freunde zum prüfen.</German>
         </Key>
     </Package>
 </Project>

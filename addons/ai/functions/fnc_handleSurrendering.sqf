@@ -34,7 +34,7 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 		_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
 		while { _isIncapacitated } do {
 			_enemyUnits = count (_unit call BIS_fnc_enemyTargets);
-			_friendlyCount = ({side _x == side _unit} count nearestObjects [getPos _unit,["Man","Car","Tank"],SURRENDER_UNIT_DISTANCE]);
+			_friendlyCount = ({side _x == side _unit} count nearestObjects [getPos _unit,["Man","Car","Tank"],GVAR(surrenderDistance)]);
 			_surrenderChance = 0 max (85 min ((GVAR(surrenderChance) + (_enemyUnits * GVAR(surrenderChancePerEnemy))) - _friendlyCount * GVAR(surrenderChancePerEnemy)));
 #ifdef DEBUG_MODE_FULL
 			[format ["Friendlies: %1, SurrenderChance: %2", _friendlyCount, _surrenderChance]] remoteExec ["hint"];
@@ -73,7 +73,7 @@ if(_isIncapacitated && !_wasIncapacitated) then {
 						[""] remoteExec ["hintSilent"];
 #endif
 						if(_unit getVariable ["ace_captives_isHandcuffed", false]) exitWith {false};
-						_enemyClose = _unit distance (_unit findNearestEnemy _unit) <= SURRENDER_UNIT_DISTANCE;
+						_enemyClose = _unit distance (_unit findNearestEnemy _unit) <= GVAR(surrenderDistance);
 #ifdef DEBUG_MODE_FULL
 						[format ["Enemey Close %1 %2",_enemyClose,_unit distance (_unit findNearestEnemy _unit)]] remoteExec ["hint"];
 						sleep 1;
