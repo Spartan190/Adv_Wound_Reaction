@@ -65,6 +65,14 @@
             <English>Multiplier to be applied to the bandaging when AWR is triggered.</English>
             <German>Faktor der auf das Bandagieren angewendet wird, wenn AWR ausgelöst wird.</German>
         </Key>
+        <Key ID="STR_AWR_Main_IgnoreBurnDamage_DisplayName">
+            <English>Ignore burn damage?</English>
+            <German>Brand schaden ignorieren?</German>
+        </Key>
+        <Key ID="STR_AWR_Main_IgnoreBurnDamage_Description">
+            <English>Determines if damage inflicted by burn wounds should be ignored. With default ACE it's not possible to bandage burn wounds. So when ignoring them units can still get up again by bandaging the regular wounds.</English>
+            <German>Bestimmt, ob Schaden durch Brandverletzungen ignoriert werden sollen. Standardmäßig hat ACE keine Möglichkeit Brandverletzungen zu bandagieren. Wenn diese ignoriert werden, können die Einheiten durch verbindingen der normalen Verletzungen wieder aufstehen.</German>
+        </Key>
         <Key ID="STR_AWR_Main_SLOW_BANDAGING">
             <English>Bandaging time is increased due to your injuries.</English>
             <German>Bandagierzeit ist wegen deiner Verletzungen erhöht.</German>

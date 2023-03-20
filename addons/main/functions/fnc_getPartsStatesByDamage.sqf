@@ -30,9 +30,12 @@ _areaDamages = [0,0,0];
 _openWounds = _unit getVariable [QACEVAR(medical,openWounds), []];
 // Exclude non penetrating body damage
 {
-    _x params ["", "_bodyPartN", "_amountOf", "", "_damage"];
+    _x params ["_classID", "_bodyPartN", "_amountOf", "", "_damage"];
+    private _className = ACEVAR(medical_damage,woundClassNamesComplex) select _classID; // ThermalBurn
     if (_damage >= ACEVAR(medical,const_penetrationThreshold)) then {
-        _bodyPartDamage set [_bodyPartN, (_bodyPartDamage select _bodyPartN) + (_amountOf * _damage)];
+        if(!("ThermalBurn" in _className) || !GVAR(ignoreBurnDamage)) then {
+            _bodyPartDamage set [_bodyPartN, (_bodyPartDamage select _bodyPartN) + (_amountOf * _damage)];
+        }
     };
 } forEach _openWounds;
 
@@ -41,8 +44,11 @@ if(GVAR(damageIgnoreLevel) > 0) then {
     // Exclude non penetrating body damage
     {
         _x params ["", "_bodyPartN", "_amountOf", "", "_damage"];
+        private _className = ACEVAR(medical_damage,woundClassNamesComplex) select _classID; // ThermalBurn
         if (_damage >= ACEVAR(medical,const_penetrationThreshold)) then {
-            _bodyPartDamage set [_bodyPartN, (_bodyPartDamage select _bodyPartN) + (_amountOf * _damage)];
+            if(!("ThermalBurn" in _className) || !GVAR(ignoreBurnDamage)) then {
+                _bodyPartDamage set [_bodyPartN, (_bodyPartDamage select _bodyPartN) + (_amountOf * _damage)];
+            };
         };
     } forEach _bandagedWounds;
 };
