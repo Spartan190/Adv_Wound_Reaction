@@ -13,7 +13,7 @@
 
 	[QACEVAR(medical,woundReceived), {
 		params ["_unit", "_allDamages", "_shooter", "_damageType"];
-		if(!isPlayer _unit || !local _unit || !GVAR(concussionEnabled)) exitWith {};
+		if(!isPlayer _unit || !local _unit || !GVAR(concussionEnabled) || _damageType == "burn") exitWith {};
 		TRACE_2("Wound Received Player",player,_unit);
 		_bodyAreaStates = [_unit,GVAR(incapacitationType)] call EFUNC(main,getAreaStates);
 		_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
