@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
 * Author: [79AD] S. Spartan
@@ -23,7 +24,7 @@
 *
 * Public: No
 */
-params ["_unit","_incapacitationType"];
+params ["_unit","_incapacitationType","_deltaT"];
 private _areaDamages = [0,0,0]; // body/head, arms, legs
 
 _painStates = [0,0,0];
@@ -39,4 +40,22 @@ if(_incapacitationType in [1,2]) then {
 _areaDamages set [0, (_painStates select 0) max (_damageStates select 0)];
 _areaDamages set [1, (_painStates select 1) max (_damageStates select 1)];
 _areaDamages set [2, (_painStates select 2) max (_damageStates select 2)];
+
+_isBurning = _unit call ACEFUNC(fire,isBurning);
+_burnTimer = _unit getVariable [QGVAR(burnTimer), 0.0];
+TRACE_3("Burn check", _isBurning, _burnTimer, _deltaT);
+if(_isBurning && _burnTimer < BURN_TIME_TO_FATAL) then {
+    _burnTimer = _burnTimer + _deltaT;
+} else {
+    if(!_isBurning) then {
+        _burnTimer = 0.0;
+    };
+};
+TRACE_1("Setting burnTimer", _burnTimer);
+_unit setVariable [QGVAR(burnTimer), _burnTimer, true];
+
+if(_burnTimer >= BURN_TIME_TO_FATAL) then {
+    _areaDamages set [0, 2]; // units body is in maximum level
+};
+
 _areaDamages; // return the areaDamages

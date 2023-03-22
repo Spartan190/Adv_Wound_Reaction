@@ -17,4 +17,5 @@
 #define GET_LIMBS_DAMAGE_MODE(unit) ([EGVAR(ai,limbHandleMode),EGVAR(player,limbHandleMode)] select (isPlayer unit))
 #define SHOW_HINT(message) if(awr_main_displayHints) then { 0 spawn { hintSilent message; sleep 5; hintSilent ""; }; }
 #define VOL_UNCONSCIOUS 0.25
+#define BURN_TIME_TO_FATAL 10.0
 
