@@ -3,7 +3,7 @@
 
 ["CBA_settingsInitialized", {
 	if (!hasInterface) exitWith {};
-	["awr_handleStaesUpdate", {
+	["awr_handleStatesUpdate", {
 		params ["_unit","_oldBodyAreaStates","_bodyAreaStates"];
 		_bodyAreaStates params ["_bodyState","_armsState","_legsState"];
 		_oldBodyAreaStates params ["_oldBodyState","_oldArmsState","_oldLegsState"];
