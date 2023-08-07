@@ -1,0 +1,471 @@
+2023-08-07T13:26:20.611230Z TRACE ThreadId(01) version: 1.7.2
+2023-08-07T13:26:20.611341Z TRACE ThreadId(01) platform: windows
+2023-08-07T13:26:20.612584Z TRACE ThreadId(01) checking for version macro in "addons/main/script_version.hpp"
+2023-08-07T13:26:20.624879Z  INFO ThreadId(01) Config loaded for AWR 5.8.10.62-ba4cfd62
+2023-08-07T13:26:20.624936Z TRACE ThreadId(01) using temporary folder: "D:\\Temp\\hemtt\\z_awr"
+2023-08-07T13:26:20.624946Z TRACE ThreadId(01) using project folder: "P:\\z\\awr"
+2023-08-07T13:26:20.624953Z TRACE ThreadId(01) using out folder: "P:\\z\\awr\\.hemttout"
+2023-08-07T13:26:20.625368Z TRACE ThreadId(01) using build folder: "P:\\z\\awr\\.hemttout\\build"
+2023-08-07T13:26:20.629059Z TRACE ThreadId(01) vfs overlay at root: "D:\\Temp\\hemtt\\z_awr\\output"
+2023-08-07T13:26:20.629082Z TRACE ThreadId(01) vfs root: "P:\\z\\awr"
+2023-08-07T13:26:20.632606Z  INFO ThreadId(01) Creating `build` version
+2023-08-07T13:26:20.632624Z TRACE ThreadId(01) phase: init (start)
+2023-08-07T13:26:20.663722Z TRACE ThreadId(01) link "D:\\Temp\\hemtt\\z_awr\\source\\z\\awr\\addons\\ai" => "P:\\z\\awr\\addons\\ai"
+2023-08-07T13:26:20.691428Z TRACE ThreadId(01) link "D:\\Temp\\hemtt\\z_awr\\source\\z\\awr\\addons\\main" => "P:\\z\\awr\\addons\\main"
+2023-08-07T13:26:20.710850Z TRACE ThreadId(01) link "D:\\Temp\\hemtt\\z_awr\\source\\z\\awr\\addons\\player" => "P:\\z\\awr\\addons\\player"
+2023-08-07T13:26:20.731276Z TRACE ThreadId(01) link "D:\\Temp\\hemtt\\z_awr\\source\\x\\cba" => "P:\\z\\awr\\include\\x\\cba"
+2023-08-07T13:26:20.752089Z TRACE ThreadId(01) link "D:\\Temp\\hemtt\\z_awr\\source\\z\\ace" => "P:\\z\\awr\\include\\z\\ace"
+2023-08-07T13:26:20.772156Z TRACE ThreadId(01) phase: init (sqf) (start)
+2023-08-07T13:26:20.772191Z TRACE ThreadId(01) phase: init (sqf) (done)
+2023-08-07T13:26:20.772203Z TRACE ThreadId(01) phase: init (Rapifier) (start)
+2023-08-07T13:26:20.772214Z TRACE ThreadId(01) phase: init (Rapifier) (done)
+2023-08-07T13:26:20.772220Z TRACE ThreadId(01) phase: init (Binarize) (start)
+2023-08-07T13:26:20.772664Z TRACE ThreadId(01) phase: init (Binarize) (done)
+2023-08-07T13:26:20.772684Z TRACE ThreadId(01) phase: init (Hooks) (start)
+2023-08-07T13:26:20.772968Z TRACE ThreadId(01) no hooks folder
+2023-08-07T13:26:20.772978Z TRACE ThreadId(01) phase: init (Hooks) (done)
+2023-08-07T13:26:20.772988Z TRACE ThreadId(01) phase: init (ArmaScriptCompiler) (start)
+2023-08-07T13:26:20.773000Z TRACE ThreadId(01) using asc folder at "D:\\Temp\\hemtt\\z_awr\\asc"
+2023-08-07T13:26:20.773578Z TRACE ThreadId(01) phase: init (ArmaScriptCompiler) (done)
+2023-08-07T13:26:20.773593Z TRACE ThreadId(01) phase: init (Files) (start)
+2023-08-07T13:26:20.773599Z TRACE ThreadId(01) phase: init (Files) (done)
+2023-08-07T13:26:20.773606Z TRACE ThreadId(01) phase: init (done)
+2023-08-07T13:26:20.773614Z TRACE ThreadId(01) phase: check (start)
+2023-08-07T13:26:20.773620Z TRACE ThreadId(01) phase: check (sqf) (start)
+2023-08-07T13:26:20.773627Z TRACE ThreadId(01) phase: check (sqf) (done)
+2023-08-07T13:26:20.773633Z TRACE ThreadId(01) phase: check (Rapifier) (start)
+2023-08-07T13:26:20.773639Z TRACE ThreadId(01) phase: check (Rapifier) (done)
+2023-08-07T13:26:20.773645Z TRACE ThreadId(01) phase: check (Binarize) (start)
+2023-08-07T13:26:20.773650Z TRACE ThreadId(01) phase: check (Binarize) (done)
+2023-08-07T13:26:20.773655Z TRACE ThreadId(01) phase: check (Hooks) (start)
+2023-08-07T13:26:20.773660Z TRACE ThreadId(01) phase: check (Hooks) (done)
+2023-08-07T13:26:20.773665Z TRACE ThreadId(01) phase: check (ArmaScriptCompiler) (start)
+2023-08-07T13:26:20.773670Z TRACE ThreadId(01) phase: check (ArmaScriptCompiler) (done)
+2023-08-07T13:26:20.773675Z TRACE ThreadId(01) phase: check (Files) (start)
+2023-08-07T13:26:20.773680Z TRACE ThreadId(01) phase: check (Files) (done)
+2023-08-07T13:26:20.773685Z TRACE ThreadId(01) phase: check (done)
+2023-08-07T13:26:20.773691Z TRACE ThreadId(01) phase: pre_build (start)
+2023-08-07T13:26:20.773696Z TRACE ThreadId(01) phase: pre_build (sqf) (start)
+2023-08-07T13:26:20.773701Z TRACE ThreadId(01) phase: pre_build (sqf) (done)
+2023-08-07T13:26:20.773755Z TRACE ThreadId(01) phase: pre_build (Rapifier) (start)
+2023-08-07T13:26:20.782841Z DEBUG ThreadId(05) rapifying /addons/ai/config.cpp
+2023-08-07T13:26:20.782881Z TRACE ThreadId(05) find_include: /addons/ai/config.cpp config.cpp
+2023-08-07T13:26:20.783536Z DEBUG ThreadId(03) rapifying /addons/main/config.cpp
+2023-08-07T13:26:20.783557Z TRACE ThreadId(03) find_include: /addons/main/config.cpp config.cpp
+2023-08-07T13:26:20.783802Z TRACE ThreadId(05) find_include: /addons/ai/config.cpp script_component.hpp
+2023-08-07T13:26:20.784345Z TRACE ThreadId(03) find_include: /addons/main/config.cpp script_component.hpp
+2023-08-07T13:26:20.784629Z TRACE ThreadId(05) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.784710Z DEBUG ThreadId(04) rapifying /addons/player/config.cpp
+2023-08-07T13:26:20.784726Z TRACE ThreadId(04) find_include: /addons/player/config.cpp config.cpp
+2023-08-07T13:26:20.785101Z TRACE ThreadId(03) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.785525Z TRACE ThreadId(04) find_include: /addons/player/config.cpp script_component.hpp
+2023-08-07T13:26:20.785656Z TRACE ThreadId(05) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.785980Z TRACE ThreadId(03) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.786163Z TRACE ThreadId(04) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.786343Z TRACE ThreadId(05) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.786689Z TRACE ThreadId(03) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.787004Z TRACE ThreadId(04) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.787580Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.787701Z TRACE ThreadId(04) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.788121Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.788934Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.799626Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:20.799876Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:20.800124Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:20.838238Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:20.839863Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:20.839926Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:20.843460Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:20.844895Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:20.845184Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:20.854835Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:20.855155Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:20.855973Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:20.863991Z TRACE ThreadId(05) find_include: /addons/ai/config.cpp CfgEventHandlers.hpp
+2023-08-07T13:26:20.864162Z TRACE ThreadId(04) find_include: /addons/player/config.cpp CfgEventHandlers.hpp
+2023-08-07T13:26:20.866107Z TRACE ThreadId(03) find_include: /addons/main/config.cpp CfgEventHandlers.hpp
+2023-08-07T13:26:20.867503Z TRACE ThreadId(03) find_include: /addons/main/config.cpp CfgVehicles.hpp
+2023-08-07T13:26:20.906157Z  INFO ThreadId(01) Rapified 3 addon configs
+2023-08-07T13:26:20.906185Z TRACE ThreadId(01) phase: pre_build (Rapifier) (done)
+2023-08-07T13:26:20.906192Z TRACE ThreadId(01) phase: pre_build (Binarize) (start)
+2023-08-07T13:26:20.957722Z  INFO ThreadId(01) Binarized 0 files
+2023-08-07T13:26:20.957743Z TRACE ThreadId(01) phase: pre_build (Binarize) (done)
+2023-08-07T13:26:20.957750Z TRACE ThreadId(01) phase: pre_build (Hooks) (start)
+2023-08-07T13:26:20.957760Z TRACE ThreadId(01) phase: pre_build (Hooks) (done)
+2023-08-07T13:26:20.957766Z TRACE ThreadId(01) phase: pre_build (ArmaScriptCompiler) (start)
+2023-08-07T13:26:20.958137Z TRACE ThreadId(01) unpacking "asc.exe" to "D:\\Temp\\hemtt\\z_awr\\asc\\asc.exe"
+2023-08-07T13:26:20.988135Z TRACE ThreadId(03) find_include: /addons/ai/functions/fnc_handleLegsDamage.sqf fnc_handleLegsDamage.sqf
+2023-08-07T13:26:20.988135Z TRACE ThreadId(04) find_include: /addons/ai/XEH_postInit.sqf XEH_postInit.sqf
+2023-08-07T13:26:20.988154Z TRACE ThreadId(07) find_include: /addons/ai/functions/fnc_handleWeaponUsage.sqf fnc_handleWeaponUsage.sqf
+2023-08-07T13:26:20.988170Z TRACE ThreadId(05) find_include: /addons/ai/functions/fnc_checkIncapacitatedEH.sqf fnc_checkIncapacitatedEH.sqf
+2023-08-07T13:26:20.988163Z TRACE ThreadId(02) find_include: /addons/ai/XEH_preInit.sqf XEH_preInit.sqf
+2023-08-07T13:26:20.988217Z TRACE ThreadId(08) find_include: /addons/ai/initSettings.sqf initSettings.sqf
+2023-08-07T13:26:20.988212Z TRACE ThreadId(09) find_include: /addons/ai/functions/fnc_pickupWeapons.sqf fnc_pickupWeapons.sqf
+2023-08-07T13:26:20.988168Z TRACE ThreadId(06) find_include: /addons/ai/functions/fnc_handleSurrendering.sqf fnc_handleSurrendering.sqf
+2023-08-07T13:26:20.989485Z TRACE ThreadId(02) find_include: /addons/ai/XEH_preInit.sqf script_component.hpp
+2023-08-07T13:26:20.989796Z TRACE ThreadId(05) find_include: /addons/ai/functions/fnc_checkIncapacitatedEH.sqf script_component.hpp
+2023-08-07T13:26:20.990133Z TRACE ThreadId(09) find_include: /addons/ai/functions/fnc_pickupWeapons.sqf script_component.hpp
+2023-08-07T13:26:20.990409Z TRACE ThreadId(04) find_include: /addons/ai/XEH_postInit.sqf script_component.hpp
+2023-08-07T13:26:20.990511Z TRACE ThreadId(03) find_include: /addons/ai/functions/fnc_handleLegsDamage.sqf script_component.hpp
+2023-08-07T13:26:20.990563Z TRACE ThreadId(05) find_include: /addons/ai/functions\script_component.hpp \z\awr\addons\ai\script_component.hpp
+2023-08-07T13:26:20.990687Z TRACE ThreadId(02) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.991040Z TRACE ThreadId(07) find_include: /addons/ai/functions/fnc_handleWeaponUsage.sqf script_component.hpp
+2023-08-07T13:26:20.991158Z TRACE ThreadId(09) find_include: /addons/ai/functions\script_component.hpp \z\awr\addons\ai\script_component.hpp
+2023-08-07T13:26:20.991503Z TRACE ThreadId(03) find_include: /addons/ai/functions\script_component.hpp \z\awr\addons\ai\script_component.hpp
+2023-08-07T13:26:20.991668Z TRACE ThreadId(04) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.991827Z TRACE ThreadId(05) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.991960Z TRACE ThreadId(07) find_include: /addons/ai/functions\script_component.hpp \z\awr\addons\ai\script_component.hpp
+2023-08-07T13:26:20.992028Z TRACE ThreadId(02) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.992350Z TRACE ThreadId(09) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.992468Z TRACE ThreadId(06) find_include: /addons/ai/functions/fnc_handleSurrendering.sqf script_component.hpp
+2023-08-07T13:26:20.992765Z TRACE ThreadId(03) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.992886Z TRACE ThreadId(04) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.993226Z TRACE ThreadId(02) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.993246Z TRACE ThreadId(07) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.993265Z TRACE ThreadId(06) find_include: /addons/ai/functions\script_component.hpp \z\awr\addons\ai\script_component.hpp
+2023-08-07T13:26:20.993332Z TRACE ThreadId(05) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.993583Z TRACE ThreadId(09) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.994164Z TRACE ThreadId(04) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.994305Z TRACE ThreadId(06) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:20.994406Z TRACE ThreadId(03) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.994686Z TRACE ThreadId(05) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.994766Z TRACE ThreadId(07) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.994792Z TRACE ThreadId(09) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.995167Z TRACE ThreadId(02) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.995652Z TRACE ThreadId(03) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.996016Z TRACE ThreadId(06) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:20.996074Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.996156Z TRACE ThreadId(07) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.996979Z TRACE ThreadId(09) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.997141Z TRACE ThreadId(06) find_include: /addons/ai\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:20.997200Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.997358Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.997934Z TRACE ThreadId(07) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:20.998936Z TRACE ThreadId(06) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.001317Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.004050Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.006121Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.006239Z TRACE ThreadId(07) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.007189Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.007341Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.008561Z TRACE ThreadId(06) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.064758Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.068121Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.072478Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.075300Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.078634Z TRACE ThreadId(02) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.079142Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.080724Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.081279Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.081469Z TRACE ThreadId(06) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.082557Z TRACE ThreadId(07) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.082809Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.087369Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.088025Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.090118Z TRACE ThreadId(07) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.090183Z TRACE ThreadId(06) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.091214Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.092465Z TRACE ThreadId(02) find_include: /addons/ai/XEH_preInit.sqf XEH_PREP.hpp
+2023-08-07T13:26:21.094760Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.095074Z TRACE ThreadId(09) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.098307Z TRACE ThreadId(07) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.098728Z TRACE ThreadId(06) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.099455Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.100743Z TRACE ThreadId(02) find_include: /addons/ai/XEH_preInit.sqf initSettings.sqf
+2023-08-07T13:26:21.224560Z TRACE ThreadId(08) find_include: /addons/main/initSettings.sqf initSettings.sqf
+2023-08-07T13:26:21.224612Z TRACE ThreadId(03) find_include: /addons/main/functions/fnc_fallDown.sqf fnc_fallDown.sqf
+2023-08-07T13:26:21.224612Z TRACE ThreadId(09) find_include: /addons/main/functions/fnc_getPain.sqf fnc_getPain.sqf
+2023-08-07T13:26:21.224612Z TRACE ThreadId(04) find_include: /addons/main/functions/fnc_goProne.sqf fnc_goProne.sqf
+2023-08-07T13:26:21.224625Z TRACE ThreadId(02) find_include: /addons/main/XEH_postInit.sqf XEH_postInit.sqf
+2023-08-07T13:26:21.224618Z TRACE ThreadId(06) find_include: /addons/main/functions/fnc_getPartsStatesByDamage.sqf fnc_getPartsStatesByDamage.sqf
+2023-08-07T13:26:21.224620Z TRACE ThreadId(05) find_include: /addons/main/functions/fnc_getPartsStatesByPain.sqf fnc_getPartsStatesByPain.sqf
+2023-08-07T13:26:21.224615Z TRACE ThreadId(07) find_include: /addons/main/functions/fnc_getBandageTime.sqf fnc_getBandageTime.sqf
+2023-08-07T13:26:21.224622Z TRACE ThreadId(13) find_include: /addons/main/functions/fnc_getAreaStates.sqf fnc_getAreaStates.sqf
+2023-08-07T13:26:21.224612Z TRACE ThreadId(12) find_include: /addons/main/functions/fnc_blurAndDeaf.sqf fnc_blurAndDeaf.sqf
+2023-08-07T13:26:21.224620Z TRACE ThreadId(11) find_include: /addons/main/functions/fnc_inDeepWater.sqf fnc_inDeepWater.sqf
+2023-08-07T13:26:21.224615Z TRACE ThreadId(10) find_include: /addons/main/XEH_preInit.sqf XEH_preInit.sqf
+2023-08-07T13:26:21.225928Z TRACE ThreadId(02) find_include: /addons/main/XEH_postInit.sqf script_component.hpp
+2023-08-07T13:26:21.225985Z TRACE ThreadId(10) find_include: /addons/main/XEH_preInit.sqf script_component.hpp
+2023-08-07T13:26:21.226251Z TRACE ThreadId(03) find_include: /addons/main/functions/fnc_fallDown.sqf script_component.hpp
+2023-08-07T13:26:21.226605Z TRACE ThreadId(09) find_include: /addons/main/functions/fnc_getPain.sqf script_component.hpp
+2023-08-07T13:26:21.226824Z TRACE ThreadId(04) find_include: /addons/main/functions/fnc_goProne.sqf script_component.hpp
+2023-08-07T13:26:21.226944Z TRACE ThreadId(05) find_include: /addons/main/functions/fnc_getPartsStatesByPain.sqf script_component.hpp
+2023-08-07T13:26:21.227182Z TRACE ThreadId(02) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.227296Z TRACE ThreadId(11) find_include: /addons/main/functions/fnc_inDeepWater.sqf script_component.hpp
+2023-08-07T13:26:21.227308Z TRACE ThreadId(10) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.227354Z TRACE ThreadId(12) find_include: /addons/main/functions/fnc_blurAndDeaf.sqf script_component.hpp
+2023-08-07T13:26:21.227431Z TRACE ThreadId(07) find_include: /addons/main/functions/fnc_getBandageTime.sqf script_component.hpp
+2023-08-07T13:26:21.227671Z TRACE ThreadId(03) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.227817Z TRACE ThreadId(09) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.227837Z TRACE ThreadId(04) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.228126Z TRACE ThreadId(13) find_include: /addons/main/functions/fnc_getAreaStates.sqf script_component.hpp
+2023-08-07T13:26:21.228323Z TRACE ThreadId(05) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.228423Z TRACE ThreadId(11) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.228490Z TRACE ThreadId(07) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.228522Z TRACE ThreadId(12) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.228972Z TRACE ThreadId(03) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.229061Z TRACE ThreadId(02) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.229149Z TRACE ThreadId(06) find_include: /addons/main/functions/fnc_getPartsStatesByDamage.sqf script_component.hpp
+2023-08-07T13:26:21.229176Z TRACE ThreadId(13) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.229323Z TRACE ThreadId(10) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.229409Z TRACE ThreadId(04) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.229468Z TRACE ThreadId(09) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.229711Z TRACE ThreadId(05) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.230016Z TRACE ThreadId(06) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.230347Z TRACE ThreadId(11) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.230394Z TRACE ThreadId(12) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.230416Z TRACE ThreadId(07) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.231197Z TRACE ThreadId(03) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.231419Z TRACE ThreadId(02) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.231516Z TRACE ThreadId(13) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.231919Z TRACE ThreadId(10) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.232217Z TRACE ThreadId(04) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.232220Z TRACE ThreadId(06) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.232597Z TRACE ThreadId(09) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.232785Z TRACE ThreadId(12) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.232786Z TRACE ThreadId(05) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.232825Z TRACE ThreadId(03) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.232849Z TRACE ThreadId(11) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.232866Z TRACE ThreadId(07) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.233081Z TRACE ThreadId(13) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.233395Z TRACE ThreadId(04) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.233565Z TRACE ThreadId(02) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.233880Z TRACE ThreadId(10) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.233995Z TRACE ThreadId(06) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.234294Z TRACE ThreadId(09) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.234389Z TRACE ThreadId(12) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.234505Z TRACE ThreadId(05) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.234933Z TRACE ThreadId(11) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.234995Z TRACE ThreadId(07) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.235118Z TRACE ThreadId(13) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.235327Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.235867Z TRACE ThreadId(06) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.235993Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.237296Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.237388Z TRACE ThreadId(12) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.237572Z TRACE ThreadId(09) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.238269Z TRACE ThreadId(11) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.238350Z TRACE ThreadId(07) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.238720Z TRACE ThreadId(13) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.238776Z TRACE ThreadId(06) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.242640Z TRACE ThreadId(10) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.242903Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.243588Z TRACE ThreadId(08) find_include: /addons/main/functions/fnc_canDrag.sqf fnc_canDrag.sqf
+2023-08-07T13:26:21.245068Z TRACE ThreadId(08) find_include: /addons/main/functions/fnc_canDrag.sqf script_component.hpp
+2023-08-07T13:26:21.246284Z TRACE ThreadId(08) find_include: /addons/main/functions\script_component.hpp \z\awr\addons\main\script_component.hpp
+2023-08-07T13:26:21.246867Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.247256Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.247586Z TRACE ThreadId(08) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.248772Z TRACE ThreadId(12) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.248880Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.249138Z TRACE ThreadId(08) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.250115Z TRACE ThreadId(11) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.250418Z TRACE ThreadId(07) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.250448Z TRACE ThreadId(08) find_include: /addons/main\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.250840Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.251269Z TRACE ThreadId(06) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.252279Z TRACE ThreadId(13) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.252807Z TRACE ThreadId(08) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.267246Z TRACE ThreadId(08) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.332201Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.340054Z TRACE ThreadId(10) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.344634Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.349402Z TRACE ThreadId(12) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.351084Z TRACE ThreadId(10) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.352051Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.353482Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.353799Z TRACE ThreadId(02) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.354645Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.358102Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.358344Z TRACE ThreadId(13) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.360016Z TRACE ThreadId(06) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.360719Z TRACE ThreadId(12) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.360986Z TRACE ThreadId(10) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.361460Z TRACE ThreadId(07) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.361732Z TRACE ThreadId(11) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.363494Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.364854Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.365291Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.366232Z TRACE ThreadId(08) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.369386Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.370303Z TRACE ThreadId(06) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.371418Z TRACE ThreadId(12) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.372035Z TRACE ThreadId(13) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.372930Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.373309Z TRACE ThreadId(11) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.374159Z TRACE ThreadId(07) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.375275Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.375632Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.377192Z TRACE ThreadId(08) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.380531Z TRACE ThreadId(10) find_include: /addons/main/XEH_preInit.sqf XEH_PREP.hpp
+2023-08-07T13:26:21.381117Z TRACE ThreadId(13) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.381348Z TRACE ThreadId(09) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.383152Z TRACE ThreadId(06) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.383352Z TRACE ThreadId(11) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.385630Z TRACE ThreadId(08) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.385750Z TRACE ThreadId(07) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.400132Z TRACE ThreadId(10) find_include: /addons/main/XEH_preInit.sqf initSettings.sqf
+2023-08-07T13:26:21.555502Z TRACE ThreadId(06) find_include: /addons/player/initSettings.sqf initSettings.sqf
+2023-08-07T13:26:21.555500Z TRACE ThreadId(02) find_include: /addons/player/XEH_preInit.sqf XEH_preInit.sqf
+2023-08-07T13:26:21.555501Z TRACE ThreadId(04) find_include: /addons/player/functions/fnc_checkIncapacitatedEH.sqf fnc_checkIncapacitatedEH.sqf
+2023-08-07T13:26:21.555510Z TRACE ThreadId(05) find_include: /addons/player/functions/fnc_handleWeaponUsage.sqf fnc_handleWeaponUsage.sqf
+2023-08-07T13:26:21.555515Z TRACE ThreadId(09) find_include: /addons/player/functions/fnc_handleLegsDamage.sqf fnc_handleLegsDamage.sqf
+2023-08-07T13:26:21.555510Z TRACE ThreadId(03) find_include: /addons/player/XEH_postInit.sqf XEH_postInit.sqf
+2023-08-07T13:26:21.556586Z TRACE ThreadId(02) find_include: /addons/player/XEH_preInit.sqf script_component.hpp
+2023-08-07T13:26:21.557070Z TRACE ThreadId(04) find_include: /addons/player/functions/fnc_checkIncapacitatedEH.sqf script_component.hpp
+2023-08-07T13:26:21.557471Z TRACE ThreadId(02) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.557497Z TRACE ThreadId(03) find_include: /addons/player/XEH_postInit.sqf script_component.hpp
+2023-08-07T13:26:21.557764Z TRACE ThreadId(09) find_include: /addons/player/functions/fnc_handleLegsDamage.sqf script_component.hpp
+2023-08-07T13:26:21.558071Z TRACE ThreadId(04) find_include: /addons/player/functions\script_component.hpp \z\awr\addons\player\script_component.hpp
+2023-08-07T13:26:21.558243Z TRACE ThreadId(05) find_include: /addons/player/functions/fnc_handleWeaponUsage.sqf script_component.hpp
+2023-08-07T13:26:21.558406Z TRACE ThreadId(03) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.558602Z TRACE ThreadId(02) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.558639Z TRACE ThreadId(09) find_include: /addons/player/functions\script_component.hpp \z\awr\addons\player\script_component.hpp
+2023-08-07T13:26:21.558962Z TRACE ThreadId(05) find_include: /addons/player/functions\script_component.hpp \z\awr\addons\player\script_component.hpp
+2023-08-07T13:26:21.559276Z TRACE ThreadId(04) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.559585Z TRACE ThreadId(02) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.559696Z TRACE ThreadId(03) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.559747Z TRACE ThreadId(09) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.560156Z TRACE ThreadId(05) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_mod.hpp
+2023-08-07T13:26:21.560452Z TRACE ThreadId(04) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.560858Z TRACE ThreadId(03) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.561134Z TRACE ThreadId(09) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.561368Z TRACE ThreadId(04) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.561442Z TRACE ThreadId(02) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.561557Z TRACE ThreadId(05) find_include: /addons/main\script_mod.hpp script_version.hpp
+2023-08-07T13:26:21.562079Z TRACE ThreadId(09) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.562275Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.562533Z TRACE ThreadId(05) find_include: /addons/player\script_component.hpp \z\awr\addons\main\script_macros.hpp
+2023-08-07T13:26:21.563120Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.563789Z TRACE ThreadId(09) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.564161Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\main\script_macros.hpp
+2023-08-07T13:26:21.568762Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.570140Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.570407Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.571809Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.572924Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\main\script_macros_common.hpp
+2023-08-07T13:26:21.625861Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.632039Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.633052Z TRACE ThreadId(02) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.634406Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.635670Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.637238Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp \x\cba\addons\xeh\script_xeh.hpp
+2023-08-07T13:26:21.639616Z TRACE ThreadId(02) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.639754Z TRACE ThreadId(03) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.643805Z TRACE ThreadId(09) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.645628Z TRACE ThreadId(05) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.645714Z TRACE ThreadId(04) find_include: include\z/ace/addons/main/script_macros.hpp script_debug.hpp
+2023-08-07T13:26:21.647281Z TRACE ThreadId(03) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.651155Z TRACE ThreadId(04) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.651385Z TRACE ThreadId(09) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.652681Z TRACE ThreadId(05) find_include: /addons/main\script_macros.hpp \z\ace\addons\medical_engine\script_macros_medical.hpp
+2023-08-07T13:26:21.654470Z TRACE ThreadId(02) find_include: /addons/player/XEH_preInit.sqf XEH_PREP.hpp
+2023-08-07T13:26:21.658822Z TRACE ThreadId(02) find_include: /addons/player/XEH_preInit.sqf initSettings.sqf
+2023-08-07T13:26:21.727981Z DEBUG ThreadId(01) ASC Preprocess took 763
+2023-08-07T13:26:21.934624Z DEBUG ThreadId(01) ASC took 205
+2023-08-07T13:26:21.947123Z  INFO ThreadId(01) Compiled 24 sqf files
+2023-08-07T13:26:21.947880Z TRACE ThreadId(01) phase: pre_build (ArmaScriptCompiler) (done)
+2023-08-07T13:26:21.947893Z TRACE ThreadId(01) phase: pre_build (Files) (start)
+2023-08-07T13:26:21.947899Z TRACE ThreadId(01) phase: pre_build (Files) (done)
+2023-08-07T13:26:21.947905Z TRACE ThreadId(01) phase: pre_build (done)
+2023-08-07T13:26:21.947911Z TRACE ThreadId(01) phase: build (start)
+2023-08-07T13:26:21.956041Z DEBUG ThreadId(03) building "addons/main" => "P:\\z\\awr\\.hemttout\\build\\addons\\awr_main.pbo"
+2023-08-07T13:26:21.956197Z DEBUG ThreadId(04) building "addons/player" => "P:\\z\\awr\\.hemttout\\build\\addons\\awr_player.pbo"
+2023-08-07T13:26:21.956229Z DEBUG ThreadId(02) building "addons/ai" => "P:\\z\\awr\\.hemttout\\build\\addons\\awr_ai.pbo"
+2023-08-07T13:26:21.956757Z TRACE ThreadId(03) adding file "XEH_preInit.sqfc"
+2023-08-07T13:26:21.956948Z TRACE ThreadId(02) adding file "config.bin"
+2023-08-07T13:26:21.957808Z TRACE ThreadId(04) adding file "XEH_postInit.sqf"
+2023-08-07T13:26:21.958038Z TRACE ThreadId(02) adding file "initSettings.sqf"
+2023-08-07T13:26:21.959207Z TRACE ThreadId(04) adding file "XEH_PREP.hpp"
+2023-08-07T13:26:21.959630Z TRACE ThreadId(02) adding file "CfgEventHandlers.hpp"
+2023-08-07T13:26:21.959720Z TRACE ThreadId(04) adding file "XEH_postInit.sqfc"
+2023-08-07T13:26:21.960310Z TRACE ThreadId(03) adding file "CfgEventHandlers.hpp"
+2023-08-07T13:26:21.960685Z TRACE ThreadId(04) adding file "script_component.hpp"
+2023-08-07T13:26:21.961200Z TRACE ThreadId(04) adding file "config.bin"
+2023-08-07T13:26:21.961204Z TRACE ThreadId(02) adding file "script_component.hpp"
+2023-08-07T13:26:21.961227Z TRACE ThreadId(04) adding file "XEH_preInit.sqfc"
+2023-08-07T13:26:21.961782Z TRACE ThreadId(03) adding file "initSettings.sqf"
+2023-08-07T13:26:21.962145Z TRACE ThreadId(04) adding file "README.md"
+2023-08-07T13:26:21.963212Z TRACE ThreadId(03) adding file "XEH_postInit.sqf"
+2023-08-07T13:26:21.964377Z TRACE ThreadId(04) adding file "initSettings.sqf"
+2023-08-07T13:26:21.964603Z TRACE ThreadId(03) adding file "XEH_PREP.hpp"
+2023-08-07T13:26:21.964629Z TRACE ThreadId(02) adding file "XEH_preInit.sqf"
+2023-08-07T13:26:21.965108Z TRACE ThreadId(02) adding file "XEH_preInit.sqfc"
+2023-08-07T13:26:21.965702Z TRACE ThreadId(04) adding file "XEH_preInit.sqf"
+2023-08-07T13:26:21.966004Z TRACE ThreadId(02) adding file "stringtable.xml"
+2023-08-07T13:26:21.966019Z TRACE ThreadId(03) adding file "README.md"
+2023-08-07T13:26:21.967349Z TRACE ThreadId(02) adding file "XEH_postInit.sqf"
+2023-08-07T13:26:21.967452Z TRACE ThreadId(03) adding file "XEH_preInit.sqf"
+2023-08-07T13:26:21.968778Z TRACE ThreadId(02) adding file "README.md"
+2023-08-07T13:26:21.968914Z TRACE ThreadId(03) adding file "script_mod.hpp"
+2023-08-07T13:26:21.969178Z TRACE ThreadId(04) adding file "stringtable.xml"
+2023-08-07T13:26:21.969277Z TRACE ThreadId(02) adding file "XEH_postInit.sqfc"
+2023-08-07T13:26:21.970260Z TRACE ThreadId(02) adding file "XEH_PREP.hpp"
+2023-08-07T13:26:21.970469Z TRACE ThreadId(03) adding file "script_version.hpp"
+2023-08-07T13:26:21.970730Z TRACE ThreadId(04) adding file "CfgEventHandlers.hpp"
+2023-08-07T13:26:21.970977Z TRACE ThreadId(03) adding file "config.bin"
+2023-08-07T13:26:21.971882Z TRACE ThreadId(04) adding file "functions\\fnc_handleWeaponUsage.sqfc"
+2023-08-07T13:26:21.971907Z TRACE ThreadId(03) adding file "script_component.hpp"
+2023-08-07T13:26:21.972268Z TRACE ThreadId(02) adding file "functions\\fnc_handleSurrendering.sqfc"
+2023-08-07T13:26:21.972297Z TRACE ThreadId(02) adding file "functions\\fnc_handleWeaponUsage.sqfc"
+2023-08-07T13:26:21.972945Z TRACE ThreadId(04) adding file "functions\\fnc_checkIncapacitatedEH.sqf"
+2023-08-07T13:26:21.973303Z TRACE ThreadId(02) adding file "functions\\fnc_handleLegsDamage.sqf"
+2023-08-07T13:26:21.974494Z TRACE ThreadId(04) adding file "functions\\fnc_handleLegsDamage.sqf"
+2023-08-07T13:26:21.974615Z TRACE ThreadId(03) adding file "stringtable.xml"
+2023-08-07T13:26:21.974745Z TRACE ThreadId(02) adding file "functions\\fnc_handleSurrendering.sqf"
+2023-08-07T13:26:21.975253Z TRACE ThreadId(02) adding file "functions\\fnc_pickupWeapons.sqfc"
+2023-08-07T13:26:21.976037Z TRACE ThreadId(04) adding file "functions\\fnc_handleWeaponUsage.sqf"
+2023-08-07T13:26:21.976072Z TRACE ThreadId(03) adding file "script_macros.hpp"
+2023-08-07T13:26:21.976240Z TRACE ThreadId(02) adding file "functions\\fnc_checkIncapacitatedEH.sqf"
+2023-08-07T13:26:21.976578Z TRACE ThreadId(03) adding file "XEH_postInit.sqfc"
+2023-08-07T13:26:21.976728Z TRACE ThreadId(02) adding file "functions\\fnc_handleLegsDamage.sqfc"
+2023-08-07T13:26:21.977679Z TRACE ThreadId(03) adding file "CfgVehicles.hpp"
+2023-08-07T13:26:21.977690Z TRACE ThreadId(02) adding file "functions\\fnc_handleWeaponUsage.sqf"
+2023-08-07T13:26:21.977713Z TRACE ThreadId(04) adding file "functions\\script_component.hpp"
+2023-08-07T13:26:21.978191Z TRACE ThreadId(04) adding file "functions\\fnc_checkIncapacitatedEH.sqfc"
+2023-08-07T13:26:21.978195Z TRACE ThreadId(02) adding file "functions\\fnc_checkIncapacitatedEH.sqfc"
+2023-08-07T13:26:21.978219Z TRACE ThreadId(04) adding file "functions\\fnc_handleLegsDamage.sqfc"
+2023-08-07T13:26:21.979094Z TRACE ThreadId(02) adding file "functions\\fnc_pickupWeapons.sqf"
+2023-08-07T13:26:21.979671Z TRACE ThreadId(03) adding file "functions\\fnc_getBandageTime.sqf"
+2023-08-07T13:26:21.980464Z TRACE ThreadId(02) adding file "functions\\script_component.hpp"
+2023-08-07T13:26:21.981140Z TRACE ThreadId(03) adding file "functions\\fnc_getPartsStatesByDamage.sqf"
+2023-08-07T13:26:21.982517Z TRACE ThreadId(03) adding file "functions\\fnc_getPartsStatesByPain.sqf"
+2023-08-07T13:26:21.983886Z TRACE ThreadId(03) adding file "functions\\script_component.hpp"
+2023-08-07T13:26:21.985197Z TRACE ThreadId(03) adding file "functions\\fnc_inDeepWater.sqf"
+2023-08-07T13:26:21.985654Z TRACE ThreadId(03) adding file "functions\\fnc_goProne.sqfc"
+2023-08-07T13:26:21.985682Z TRACE ThreadId(03) adding file "functions\\fnc_blurAndDeaf.sqfc"
+2023-08-07T13:26:21.985703Z TRACE ThreadId(03) adding file "functions\\fnc_inDeepWater.sqfc"
+2023-08-07T13:26:21.985726Z TRACE ThreadId(03) adding file "functions\\fnc_getPartsStatesByDamage.sqfc"
+2023-08-07T13:26:21.986644Z TRACE ThreadId(03) adding file "functions\\fnc_blurAndDeaf.sqf"
+2023-08-07T13:26:21.987099Z TRACE ThreadId(03) adding file "functions\\fnc_getAreaStates.sqfc"
+2023-08-07T13:26:21.987125Z TRACE ThreadId(03) adding file "functions\\fnc_fallDown.sqfc"
+2023-08-07T13:26:21.988358Z TRACE ThreadId(03) adding file "functions\\fnc_getPain.sqf"
+2023-08-07T13:26:21.989905Z TRACE ThreadId(03) adding file "functions\\fnc_canDrag.sqf"
+2023-08-07T13:26:21.990427Z TRACE ThreadId(03) adding file "functions\\fnc_getPartsStatesByPain.sqfc"
+2023-08-07T13:26:21.991353Z TRACE ThreadId(03) adding file "functions\\fnc_goProne.sqf"
+2023-08-07T13:26:21.992668Z TRACE ThreadId(03) adding file "functions\\fnc_getAreaStates.sqf"
+2023-08-07T13:26:21.993966Z TRACE ThreadId(03) adding file "functions\\fnc_fallDown.sqf"
+2023-08-07T13:26:21.994439Z TRACE ThreadId(03) adding file "functions\\fnc_canDrag.sqfc"
+2023-08-07T13:26:21.994466Z TRACE ThreadId(03) adding file "functions\\fnc_getBandageTime.sqfc"
+2023-08-07T13:26:21.994488Z TRACE ThreadId(03) adding file "functions\\fnc_getPain.sqfc"
+2023-08-07T13:26:21.996872Z  INFO ThreadId(01) Built 3 PBOs
+2023-08-07T13:26:21.996893Z TRACE ThreadId(01) phase: build (done)
+2023-08-07T13:26:21.996900Z TRACE ThreadId(01) phase: post_build (start)
+2023-08-07T13:26:21.996906Z TRACE ThreadId(01) phase: post_build (sqf) (start)
+2023-08-07T13:26:21.996912Z TRACE ThreadId(01) phase: post_build (sqf) (done)
+2023-08-07T13:26:21.996918Z TRACE ThreadId(01) phase: post_build (Rapifier) (start)
+2023-08-07T13:26:21.996924Z TRACE ThreadId(01) phase: post_build (Rapifier) (done)
+2023-08-07T13:26:21.996930Z TRACE ThreadId(01) phase: post_build (Binarize) (start)
+2023-08-07T13:26:21.996935Z TRACE ThreadId(01) phase: post_build (Binarize) (done)
+2023-08-07T13:26:21.996941Z TRACE ThreadId(01) phase: post_build (Hooks) (start)
+2023-08-07T13:26:21.996947Z TRACE ThreadId(01) phase: post_build (Hooks) (done)
+2023-08-07T13:26:21.996952Z TRACE ThreadId(01) phase: post_build (ArmaScriptCompiler) (start)
+2023-08-07T13:26:21.996958Z TRACE ThreadId(01) phase: post_build (ArmaScriptCompiler) (done)
+2023-08-07T13:26:21.996964Z TRACE ThreadId(01) phase: post_build (Files) (start)
+2023-08-07T13:26:22.004065Z DEBUG ThreadId(01) copying "/AWR_logo.paa" => "P:\\z\\awr\\.hemttout\\build\\AWR_logo.paa"
+2023-08-07T13:26:22.014872Z DEBUG ThreadId(01) copying "/meta.cpp" => "P:\\z\\awr\\.hemttout\\build\\meta.cpp"
+2023-08-07T13:26:22.019624Z DEBUG ThreadId(01) copying "/LICENSE" => "P:\\z\\awr\\.hemttout\\build\\LICENSE"
+2023-08-07T13:26:22.022807Z DEBUG ThreadId(01) copying "/mod.cpp" => "P:\\z\\awr\\.hemttout\\build\\mod.cpp"
+2023-08-07T13:26:25.393571Z  INFO ThreadId(01) Copied 4 files
+2023-08-07T13:26:25.393603Z TRACE ThreadId(01) phase: post_build (Files) (done)
+2023-08-07T13:26:25.393610Z TRACE ThreadId(01) phase: post_build (done)

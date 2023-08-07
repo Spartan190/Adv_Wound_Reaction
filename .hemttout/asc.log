@@ -1,0 +1,30 @@
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/initSettings.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/XEH_postInit.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/XEH_preInit.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_getAreaStates.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_fallDown.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_canDrag.sqfc
+compile compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_getBandageTime.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_blurAndDeaf.sqfc
+D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/functions/fnc_handleLegsDamage.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/functions/fnc_handleWeaponUsage.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/functions/fnc_handleSurrendering.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/functions/fnc_pickupWeapons.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/ai/functions/fnc_checkIncapacitatedEH.sqfc
+[ERR] [L2|C5|/z/awr/addons/ai/initSettings.sqf]	Parse Error: syntax error, unexpected (, expecting ] or ","
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_getPain.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_getPartsStatesByDamage.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_goProne.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/initSettings.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_inDeepWater.sqfc
+[ERR] [L2|C5|/z/awr/addons/main/initSettings.sqf]	Parse Error: syntax error, unexpected (, expecting ] or ","
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/functions/fnc_getPartsStatesByPain.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/player/XEH_preInit.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/player/XEH_postInit.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/XEH_postInit.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/player/initSettings.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/main/XEH_preInit.sqfc
+[ERR] [L2|C5|/z/awr/addons/player/initSettings.sqf]	Parse Error: syntax error, unexpected (, expecting ] or ","
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/player/functions/fnc_handleWeaponUsage.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/player/functions/fnc_checkIncapacitatedEH.sqfc
+compile D:/Temp/hemtt/z_awr/asc/output/z/awr/addons/player/functions/fnc_handleLegsDamage.sqfc
