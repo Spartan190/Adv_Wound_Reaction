@@ -5,14 +5,15 @@ template = "cba"
 mainprefix = "z"
 #include = ["./include"]
 [binarize]
-enabled = false # Default: true
+enabled = true # Default: true
 [preprocess]
-enabled = false # Default: true
+enabled = true # Default: true
 [files]
 include = [
     "mod.cpp",
     "AWR_logo.paa",
     "LICENSE",
+    "README*.md",
     "meta.cpp"
 ]
 [hemtt.build]

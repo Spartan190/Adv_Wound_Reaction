@@ -56,6 +56,16 @@
             "problemMatcher": []
         },
         {
+            "label": "HEMTT Release",
+            "type": "shell",
+            "command": "echo Building: ${workspaceFolder} && hemtt script increment_build && hemtt release",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "Build, Run and Attach",
             "group": "build",
             "dependsOn": ["HEMTT Build", "Start Arma 3 (Mission Editing)", "RPT Watcher"]
