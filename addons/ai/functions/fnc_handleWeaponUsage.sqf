@@ -57,7 +57,7 @@ if(_cWeapon == "") exitWith {};
 if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
 	switch (GVAR(weaponHandleMode)) do {
 		case 1: {
-			_pHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);
+			_pHolder = [_unit] call ACEFUNC(common,throwweapon);
 			_unit setVariable [QGVAR(primaryWeaponHolder), [_pHolder,_pWeapon], true];
 		};			
 	};
@@ -66,7 +66,7 @@ if(_cWeapon == _pWeapon && (_isIncapacitated || _armsState == 1)) then {
 	if(_cWeapon == _handgun && (_ignoreIndex != -1 || !(_unit getVariable [QGVAR(canUseHandgun), false]))) then {
 		switch (GVAR(weaponHandleMode)) do {
 			case 1: {
-				_hHolder = [_unit] call ACEFUNC(hitreactions,throwWeapon);
+				_hHolder = [_unit] call ACEFUNC(common,throwweapon);
 				_unit setVariable [QGVAR(handgunWeaponHolder), [_hHolder,_handgun], true];
 			};
 		};

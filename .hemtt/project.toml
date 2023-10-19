@@ -3,14 +3,20 @@ prefix = "awr"
 author = "[79AD] S. Spartan"
 template = "cba"
 mainprefix = "z"
-include = ["./include"]
+#include = ["./include"]
+[binarize]
+enabled = true # Default: true
+[preprocess]
+enabled = true # Default: true
 [files]
 include = [
     "mod.cpp",
     "AWR_logo.paa",
     "LICENSE",
+    "README*.md",
     "meta.cpp"
 ]
+[hemtt.build]
 optional_mod_folders = true
 sig_version = 3
 

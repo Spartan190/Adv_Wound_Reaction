@@ -53,7 +53,7 @@ if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
 				if(_inDeepWater || _isInVehicle) then {
 					_unit action ["SwitchWeapon", _unit, _unit, -1];
 				} else {
-					[_unit] call ACEFUNC(hitreactions,throwWeapon);
+					[_unit] call ACEFUNC(common,throwweapon);
 				};
 				SHOW_HINT(localize LSTRING(UNABLE_TO_USE_WEAPON));
 			};
@@ -72,7 +72,7 @@ if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
 					if(_inDeepWater || _isInVehicle) then {
 						_unit action ["SwitchWeapon", _unit, _unit, -1];
 					} else {
-						[_unit] call ACEFUNC(hitreactions,throwWeapon);
+						[_unit] call ACEFUNC(common,throwweapon);
 					};
 					SHOW_HINT(localize LSTRING(UNABLE_TO_USE_WEAPON));
 				};

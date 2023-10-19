@@ -6,14 +6,14 @@ class CfgVehicles {
 				class GVAR(drag) {
 					displayName = CSTRING(Drag);
 					condition = QUOTE([ARR_2(_player, _target)] call FUNC(canDrag));
-					statement = QUOTE([ARR_2(_player, _target)] call ACEFUNC(dragging, startDrag));
+					statement = QUOTE([ARR_2(_player, _target)] call ACEFUNC(dragging,startDrag));
 					showDisabled = 0;
 					icon = QUOTE(ACEPATHOF(dragging, UI\icons\person_drag.paa));
 				};
 				class GVAR(carry) {
 					displayName = CSTRING(Carry);
 					condition = QUOTE([ARR_2(_player, _target)] call FUNC(canDrag));
-					statement = QUOTE([ARR_2(_player, _target)] call ACEFUNC(dragging, startCarry));
+					statement = QUOTE([ARR_2(_player, _target)] call ACEFUNC(dragging,startCarry));
 					showDisabled = 0;
 					icon = QUOTE(ACEPATHOF(dragging, UI\icons\person_carry.paa));
 				};

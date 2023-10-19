@@ -1,0 +1,74 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [{
+            "label": "Start Arma 3 (Mission Editing)",
+            "type": "process",
+            "options": {
+                "cwd": "F:\\SteamLibrary\\steamapps\\common\\Arma 3" // Change to your Arma 3 installation path
+            },
+            "command": "arma3_x64.exe", // Also possible, if available: arma3profiling_x64, arma3diag_x64
+            "args": [
+                "F:\\SteamLibrary\\steamapps\\common\\Arma 3\\Profiles\\Users\\S%2e%20Spartan\\missions\\StretcherTest.Stratis\\mission.sqm", // Loads directly into editor if you have a mission folder open in VSCode
+                "-mod=P:\\z\\CBA_A3_v3.16.0-RC1-HEMTT\\@CBA_A3;P:\\z\\ace3_3.16.0-RC1-HEMTT\\@ace;", // Add mods separated by ";", absolute paths work as well
+                "-debug",
+                "-skipIntro",
+                "-noSplash",
+                "-showScriptErrors",
+                "-profiles=Profiles"
+            ],
+            // Enable launching via shortcut "Tasks: Run Test Task"
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "dependsOn": ["HEMTT Build"],
+        }, {
+            "label": "Stop Arma 3 Diag",
+            "type": "shell",
+            "command": "taskkill",
+            "args": [
+                "/F",
+                "/IM",
+                "arma3_x64.exe" // Other values: arma3diag_x64.exe, arma3profiling_x64.exe
+            ],
+            "problemMatcher": []
+        }, {
+            "label": "RPT Watcher",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-command",
+                "Timeout 5;",
+                "Get-ChildItem -Path \\\"F:\\SteamLibrary\\steamapps\\common\\Arma 3\\Profiles\\\" -Filter *.rpt | Sort-Object LastAccessTime -Descending | Select-Object -First 1 | Get-Content -Tail 100 -Wait -Encoding utf8"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "HEMTT Build",
+            "type": "shell",
+            "command": "echo Building: ${workspaceFolder} && hemtt script increment_build && hemtt build",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "HEMTT Release",
+            "type": "shell",
+            "command": "echo Building: ${workspaceFolder} && hemtt script increment_build && hemtt release",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build, Run and Attach",
+            "group": "build",
+            "dependsOn": ["HEMTT Build", "Start Arma 3 (Mission Editing)", "RPT Watcher"]
+        }
+    ]
+}
