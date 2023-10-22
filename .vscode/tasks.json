@@ -10,8 +10,7 @@
             },
             "command": "arma3_x64.exe", // Also possible, if available: arma3profiling_x64, arma3diag_x64
             "args": [
-                "F:\\SteamLibrary\\steamapps\\common\\Arma 3\\Profiles\\Users\\S%2e%20Spartan\\missions\\StretcherTest.Stratis\\mission.sqm", // Loads directly into editor if you have a mission folder open in VSCode
-                "-mod=P:\\z\\CBA_A3_v3.16.0-RC1-HEMTT\\@CBA_A3;P:\\z\\ace3_3.16.0-RC1-HEMTT\\@ace;", // Add mods separated by ";", absolute paths work as well
+                "-mod=!Workshop\\@CBA_A3;!Workshop\\@ace;z\\awr\\.hemttout\\build", // Add mods separated by ";", absolute paths work as well
                 "-debug",
                 "-skipIntro",
                 "-noSplash",
