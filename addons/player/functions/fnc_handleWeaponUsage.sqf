@@ -64,9 +64,9 @@ if(_cWeapon == _launcher && (_isIncapacitated || _armsState == 1)) then {
 		};
 	} else {
 		_ignoreIndex = EGVAR(main,ignoreChanceClasses) findIf {_handgun == _x || _handgun isKindOf _x};
-		private canUseHandgun = (_unit getVariable [QGVAR(canUseHandgun),false]);
+		_canUseHandgun = (_unit getVariable [QGVAR(canUseHandgun),false]);
 		TRACE_1("Checking canUseHandgun",canUseHandgun);
-		if(_cWeapon == _handgun && (_ignoreIndex != -1 || !canUseHandgun)) then {
+		if(_cWeapon == _handgun && (_ignoreIndex != -1 || !_canUseHandgun)) then {
 			switch (GVAR(weaponHandleMode)) do {
 				case 1: {
 					if(_inDeepWater || _isInVehicle) then {
